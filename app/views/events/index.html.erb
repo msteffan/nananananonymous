@@ -1,0 +1,36 @@
+<h2>Lessons</h2>
+
+<h4>"(+) Add new lesson"</h4>
+
+<div class="newLessonForm">
+    <!-- @Lesson.new -->
+    <%= form_for @lesson do |f| %>
+        <p>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+        </p>
+        <p>
+            <%= f.label :date %>
+            <%= f.text_field :date %>
+        </p>
+        <%= f.hidden_field :user_id, :value => @user.id %>
+        <p>
+            <%= f.submit "Create Feedback Form" %>
+        </p>
+    <% end %>
+
+</div>
+
+<% @events.each do |event| %>
+
+    <h4 class="eventTitle">
+        <%= link_to event.name, event_path(event)%>
+    </h4>
+    <p>
+        <%= link_to "Get survey link" new_event_response_path(event) %>
+    </p>
+    <div class="editIcon">
+        <%= link_to "Edit", event_path(event) %>
+    </div>
+
+<% end %>
