@@ -13,15 +13,19 @@
 
 ActiveRecord::Schema.define(version: 20150810200156) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.string   "date"
+    t.string   "instructorname"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
   end
 
-  add_index "events", ["user_id"], name: "index_events_on_user_id"
+  add_index "events", ["user_id"], name: "index_events_on_user_id", using: :btree
 
   create_table "responses", force: :cascade do |t|
     t.integer  "comfort_score"
@@ -32,7 +36,7 @@ ActiveRecord::Schema.define(version: 20150810200156) do
     t.integer  "event_id"
   end
 
-  add_index "responses", ["event_id"], name: "index_responses_on_event_id"
+  add_index "responses", ["event_id"], name: "index_responses_on_event_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -49,7 +53,9 @@ ActiveRecord::Schema.define(version: 20150810200156) do
     t.datetime "updated_at",                          null: false
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "events", "users"
+  add_foreign_key "responses", "events"
 end
