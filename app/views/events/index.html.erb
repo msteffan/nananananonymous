@@ -1,9 +1,9 @@
 <h2>Lessons</h2>
 
-<h4>"(+) Add new lesson"</h4>
+<h4 id="newLesson">"(+) Add new lesson"</h4>
 
 <div class="newLessonForm">
-    <!-- @Lesson.new -->
+    <!-- this is a form to create @Lesson.new -->
     <%= form_for @lesson do |f| %>
         <p>
             <%= f.label :name %>
@@ -27,10 +27,29 @@
         <%= link_to event.name, event_path(event)%>
     </h4>
     <p>
-        <%= link_to "Get survey link" new_event_response_path(event) %>
+        <%= link_to "Get survey link", new_event_response_path(event) %>
     </p>
     <div class="editIcon">
-        <%= link_to "Edit", event_path(event) %>
+        <%= link_to "Edit", edit_event_path(event) %>
     </div>
-
+    <div class="resultsIcon">
+        <%= link_to "See Results", event_path(event) %>
+    </div>
+    <div class="editLessonForm">
+        <!-- this is a form to update the existing lesson (event) -->
+        <%= form_for event do |f| %>
+            <p>
+                <%= f.label :name %>
+                <%= f.text_field :name %>
+            </p>
+            <p>
+                <%= f.label :date %>
+                <%= f.text_field :date %>
+            </p>
+            <%= f.hidden_field :user_id, :value => @user.id %>
+            <p>
+                <%= f.submit "Update Feedback Form" %>
+            </p>
+        <% end %>
+    </div>
 <% end %>
