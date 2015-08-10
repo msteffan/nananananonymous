@@ -13,3 +13,73 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+    box-sizing: border-box;
+}
+ h2 {
+     text-align: center;
+     font-size: 3em;
+ }
+
+ a:visited {
+     color: black;
+ }
+
+/******************** INDEX VIEW ********************/
+#newLesson {
+    font-size: 2em;
+    text-align: center;
+    color: #2E7AC8;
+}
+
+#newLessonForm {
+    display: none;
+    margin: 0 auto;
+}
+
+.lesson-listing {
+    width: 50%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: lightgrey;
+}
+
+.showLessonForm {
+    display: none;
+}
+
+.icon {
+    border: 1px solid black;
+    margin-top: 10px;
+    width:100%;
+    padding: 10px 0 10px 10px;
+    border-radius: 5px;
+    background-color: #FA4542;
+}
+
+/*.resultsIcon {
+    border: 1px solid black;
+    margin-top: 10px;
+    width:100%;
+    padding: 10px 0 10px 10px;
+    border-radius: 5px;
+    background-color: #FA4542;
+}*/
+
+/******************** LESSON REPORT VIEW ********************/
+
+h3 {
+    font-size: 2em;
+    margin-top: 5px;
+    text-align: center;
+}
+.box {
+    float: left;
+    height: 400px;
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid black;
+}

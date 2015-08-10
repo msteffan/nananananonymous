@@ -14,3 +14,48 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(){
+    // this function controls clicks on Guardian content (if it has been loaded after a search) and controls expanding/descreasing the size of the columns
+     $("#newLesson").click(function(){
+         $("#newLessonForm").animate({
+             width: "50%",
+             height: "150px",
+         }, 800, function(){
+            $("#newLessonForm").css("display", "block")
+         });
+     });
+
+    $(".editForm").on("click", function(){
+         var self = this;
+         $(self).children().animate({
+             width: "100%",
+             height: "150px"
+         }, 1000, function(){
+             $(self).children().css("display", "block")
+         });
+
+     });
+
+     $(".hideForm").on("click", function(){
+         event.stopPropagation()
+         var self = this;
+         $(self).parent().animate({
+             width: "0",
+             height: "0"
+         }, 800, function(){
+             $(self).parent().css("display", "none")
+
+         });
+
+     });
+
+
+
+
+
+
+
+
+}); // closes document.ready DO NOT DELETE

@@ -17,7 +17,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     if @event.save
-      redirect_to "/events/index"
+      redirect_to "/events"
     else
       redirect_to "/events/new"
     end
@@ -30,7 +30,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     @event.update(event_params)
-    redirect_to "/events/index"
+    redirect_to "/events"
   end
 
   def destroy

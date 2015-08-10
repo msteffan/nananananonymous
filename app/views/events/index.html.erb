@@ -1,8 +1,8 @@
-<h2>Lessons</h2>
+<h2>GA WDI Lesson Feedback</h2>
 
-<h4 id="newLesson">"(+) Add new lesson"</h4>
+<h3 id="newLesson">(+) Add new lesson</h3>
 
-<div class="newLessonForm">
+<div id="newLessonForm">
     <!-- this is a form to create @Lesson.new -->
     <%= form_for @lesson do |f| %>
         <p>
@@ -18,7 +18,7 @@
             <%= f.submit "Create Feedback Form" %>
         </p>
     <% end %>
-
+    <button type="button" name="button" class="hideForm">Cancel</button>
 </div>
 
 <% @events.each do |event| %>
@@ -29,28 +29,28 @@
         <p>
             <%= link_to "Get survey link", new_event_response_path(event) %>
         </p>
-        <div class="editIcon">
-            <%= link_to "Edit", edit_event_path(event) %>
+        <div class="icon editForm"> Edit
+            <div class="showLessonForm">
+                <!-- this is a form to update the existing lesson (event) -->
+                <%= form_for event do |f| %>
+                    <p>
+                        <%= f.label :name %>
+                        <%= f.text_field :name %>
+                    </p>
+                    <p>
+                        <%= f.label :date %>
+                        <%= f.text_field :date %>
+                    </p>
+                    <%# f.hidden_field :user_id, :value => @user.id %>
+                    <p>
+                        <%= f.submit "Update Feedback Form" %>
+                    </p>
+                <% end %>
+                <button type="button" name="button" class="hideForm">Cancel</button>
+            </div>
         </div>
-        <div class="resultsIcon">
+        <div class="icon resultsIcon">
             <%= link_to "See Results", event_path(event) %>
-        </div>
-        <div class="editLessonForm">
-            <!-- this is a form to update the existing lesson (event) -->
-            <%= form_for event do |f| %>
-                <p>
-                    <%= f.label :name %>
-                    <%= f.text_field :name %>
-                </p>
-                <p>
-                    <%= f.label :date %>
-                    <%= f.text_field :date %>
-                </p>
-                <%# f.hidden_field :user_id, :value => @user.id %>
-                <p>
-                    <%= f.submit "Update Feedback Form" %>
-                </p>
-            <% end %>
         </div>
     </div>
 <% end %>
