@@ -14,7 +14,7 @@ class ResponsesController < ApplicationController
   end
 
   def create
-    @response = Response.new(params(:response))
+    @response = Response.new(response_params)
     if @response.save
       redirect_to "/thankyou"
     else
@@ -28,7 +28,7 @@ class ResponsesController < ApplicationController
 
   def update
     @response = Response.find(params[:id])
-    @response.update(params[:response])
+    @response.update(response_params)
     # redirect?
   end
 
@@ -37,4 +37,9 @@ class ResponsesController < ApplicationController
     @response.destroy
     redirect_to "/events/index"
   end
+
+  private
+    def response_params
+        params.require(:response).permit(:comfort_score, :completeness_score, :name)
+    end
 end
