@@ -1,0 +1,23 @@
+<h2> Add Response </h2>
+
+
+<p>Comfort</p>
+<%= radio_button_tag(:comfort_score, 1) %> 1
+<%= radio_button_tag(:comfort_score, 2) %> 2
+<%= radio_button_tag(:comfort_score, 3) %> 3
+<%= radio_button_tag(:comfort_score, 4) %> 4
+<%= radio_button_tag(:comfort_score, 5) %> 5
+
+<p>Completeness</p>
+<%= radio_button_tag(:completeness_score, 1) %> 1
+<%= radio_button_tag(:completeness_score, 2) %> 2
+<%= radio_button_tag(:completeness_score, 3) %> 3
+<%= radio_button_tag(:completeness_score, 4) %> 4
+<%= radio_button_tag(:completeness_score, 5) %> 5
+
+<p>Name</p>
+<%= text_field_tag(:name, 'Optional') %>
+
+<p>
+<%= submit_tag 'Submit' %>
+</p>
