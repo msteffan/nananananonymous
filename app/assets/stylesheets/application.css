@@ -14,12 +14,30 @@
  *= require_self
  */
 
+@font-face {
+     font-family: 'News706';
+     src: asset-url('tt0363m_.ttf');
+     font-weight: normal;
+     font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PFDinTextCompPro';
+    src: asset-url('/PFDinPro/PFDinTextCompPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 * {
     box-sizing: border-box;
 }
  h2 {
      text-align: center;
      font-size: 3em;
+     font-family: 'PFDinTextCompPro';
+     font-family: 'News706';
  }
 
 a {
