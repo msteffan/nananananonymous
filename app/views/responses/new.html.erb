@@ -1,23 +1,26 @@
 <h2> Add Response </h2>
+<%= form_for [@event, @response] do |f|  %>
+    <div>
+        <p><%= label :comfort_score, "How comfortable are you with the skills in this assignment?" %></p>
+        <%= f.radio_button :comfort_score, 1 %> 1
+        <%= f.radio_button :comfort_score, 2 %> 2
+        <%= f.radio_button :comfort_score, 3 %> 3
+        <%= f.radio_button :comfort_score, 4 %> 4
+        <%= f.radio_button :comfort_score, 5 %> 5
+    </div>
+    <div>
+        <p><%= label_tag :completeness_score, "How complete is this assignment?" %></p>
+        <%= f.radio_button :completeness_score, 1 %> 1
+        <%= f.radio_button :completeness_score, 2 %> 2
+        <%= f.radio_button :completeness_score, 3 %> 3
+        <%= f.radio_button :completeness_score, 4 %> 4
+        <%= f.radio_button :completeness_score, 5 %> 5
+    </div>
+    <%= f.hidden_field :event_id, :value => @event.id %>
 
-
-<p>Comfort</p>
-<%= radio_button_tag(:comfort_score, 1) %> 1
-<%= radio_button_tag(:comfort_score, 2) %> 2
-<%= radio_button_tag(:comfort_score, 3) %> 3
-<%= radio_button_tag(:comfort_score, 4) %> 4
-<%= radio_button_tag(:comfort_score, 5) %> 5
-
-<p>Completeness</p>
-<%= radio_button_tag(:completeness_score, 1) %> 1
-<%= radio_button_tag(:completeness_score, 2) %> 2
-<%= radio_button_tag(:completeness_score, 3) %> 3
-<%= radio_button_tag(:completeness_score, 4) %> 4
-<%= radio_button_tag(:completeness_score, 5) %> 5
-
-<p>Name</p>
-<%= text_field_tag(:name, 'Optional') %>
-
-<p>
-<%= submit_tag 'Submit' %>
-</p>
+    <p>Name</p>
+    <%= f.text_field :name %>
+    <p>
+    <%= f.submit 'Submit' %>
+    </p>
+<% end %>

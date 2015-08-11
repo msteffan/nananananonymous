@@ -11,14 +11,19 @@ class ResponsesController < ApplicationController
 
   def new
     @response = Response.new
+    @event = Event.find(params[:event_id])
   end
 
   def create
+    @event = Event.find(params[:event_id])
     @response = Response.new(response_params)
+    # not the most elegant solution (below) but it works; can refactor
+    @response.event_id = @event.id
+    @response.save
     if @response.save
-      redirect_to "/thankyou"
-    else
-      redirect_to "/responses/new"
+      render "responses/thanks"
+    # else
+    #   redirect_to "/responses/new"
     end
   end
 
@@ -35,7 +40,7 @@ class ResponsesController < ApplicationController
   def destroy
     @response = Response.find(params[:id])
     @response.destroy
-    redirect_to "/events/index"
+    redirect_to "/events"
   end
 
   private
