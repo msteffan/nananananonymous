@@ -22,6 +22,10 @@
      font-size: 3em;
  }
 
+a {
+    color: black;
+    text-decoration: none;
+}
  a:visited {
      color: black;
  }
@@ -40,7 +44,7 @@
 
 .lesson-listing {
     width: 50%;
-    border: 1px solid grey;
+    /*border: 1px solid grey;*/
     border-radius: 5px;
     padding: 10px;
     margin: 10px auto;
@@ -52,22 +56,19 @@
 }
 
 .icon {
-    border: 1px solid black;
+    border: 1px solid white;
     margin-top: 10px;
     width:100%;
     padding: 10px 0 10px 10px;
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: #FA4542;
 }
 
-/*.resultsIcon {
-    border: 1px solid black;
-    margin-top: 10px;
-    width:100%;
-    padding: 10px 0 10px 10px;
-    border-radius: 5px;
-    background-color: #FA4542;
-}*/
+.icon:hover {
+    outline: 2px solid white;
+    outline-offset:-5px;
+}
+
 
 /******************** LESSON REPORT VIEW ********************/
 
