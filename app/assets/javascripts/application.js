@@ -81,103 +81,90 @@ $(".copy").on("click", function(){
  // });
 
 ///////////////////////// HIGHCHARTS HERE ////////////////////////////////
-     $(function () {
-     $('#comfort_chart').highcharts({
-         chart: {
-             type: 'column'
-         },
-         title: {
-             text: 'Comfortability'
-         },
-         subtitle: {
-             text: 'Lesson'
-         },
-         xAxis: {
-             categories: [
-                 '0',
-                 '1',
-                 '2',
-                 '3',
-                 '4',
-                 '5',
-             ],
-             crosshair: true
-         },
-         yAxis: {
-             min: 0,
-             title: {
-                 text: 'Vote Quantity'
-             }
-         },
-         tooltip: {
-             headerFormat: '<span style="font-size:10px">Comfortability: {point.key}</span><table>',
-             pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                 '<td style="padding:0"><b>{point.y} votes</b></td></tr>',
-             footerFormat: '</table>',
-             shared: true,
-             useHTML: true
-         },
-         plotOptions: {
-             column: {
-                 pointPadding: 0.2,
-                 borderWidth: 0
-             }
-         },
-         series: [{
-             name: 'Student Feedback',
-             data: [2, 8, 9, 17, 21, 4]
-         }]
-     });
- });
-
- $(function () {
-    $('#complete_chart').highcharts({
-        chart: {
-            type: 'column'
-        },
+//Comfortability Column Chart
+  $(function () {
+    $('#comfort_chart').highcharts({
+      chart: {
+        type: 'column'
+      },
+      title: {
+        text: 'Comfortability'
+      },
+      subtitle: {
+        text: 'Lesson'
+      },
+      xAxis: {
+        categories: ['0', '1', '2', '3', '4', '5' ],
+        crosshair: true
+      },
+      yAxis: {
+        min: 0,
         title: {
-            text: 'Completeness'
+          text: 'Vote Quantity'
+          }
         },
-        subtitle: {
-            text: 'Lesson'
-        },
-        xAxis: {
-            categories: [
-                '0',
-                '1',
-                '2',
-                '3',
-                '4',
-                '5',
-            ],
-            crosshair: true
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: 'Vote Quantity'
-            }
-        },
-        tooltip: {
-            headerFormat: '<span style="font-size:10px">Completeness: {point.key}</span><table>',
-            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                '<td style="padding:0"><b>{point.y} votes</b></td></tr>',
-            footerFormat: '</table>',
-            shared: true,
-            useHTML: true
-        },
-        plotOptions: {
-            column: {
-                pointPadding: 0.2,
-                borderWidth: 0
-            }
-        },
-        series: [{
-            name: 'Student Feedback',
-            data: [2, 8, 9, 17, 21, 4]
-        }]
+      tooltip: {
+        headerFormat: '<span style="font-size:10px">Comfortability: {point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+          '<td style="padding:0"><b>{point.y} votes</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+      },
+      plotOptions: {
+        column: {
+          pointPadding: 0.2,
+          borderWidth: 0
+        }
+      },
+      series: [{
+        name: 'Student Feedback',
+        data: [2, 8, 9, 17, 21, 4]
+      }]
     });
-});
+  });
+//Completeness column chart
+  $(function () {
+    $('#complete_chart').highcharts({
+      chart: {
+        type: 'column'
+      },
+      title: {
+        text: 'Completeness'
+      },
+      subtitle: {
+        text: 'Lesson'
+      },
+      xAxis: {
+        categories: ['0', '1', '2', '3', '4', '5' ],
+        crosshair: true
+      },
+      yAxis: {
+        min: 0,
+        title: {
+        text: 'Vote Quantity'
+        }
+      },
+      tooltip: {
+        headerFormat: '<span style="font-size:10px">Completeness: {point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+          '<td style="padding:0"><b>{point.y} votes</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+      },
+      plotOptions: {
+        column: {
+          pointPadding: 0.2,
+          borderWidth: 0
+        }
+      },
+      series: [{
+        name: 'Student Feedback',
+        data: [2, 8, 9, 17, 21, 4]
+      }]
+    });
+  });
 
 
 
