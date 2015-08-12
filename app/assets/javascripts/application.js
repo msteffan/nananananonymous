@@ -18,6 +18,8 @@
 
 $(document).ready(function(){
     // this function expands the form for adding a new lesson
+    $("h3").empty();
+
      $("#newLesson").click(function(){
          if ($(window).width() >= 700){
              $("#newLessonForm").animate({
@@ -85,6 +87,12 @@ $(".copy").on("click", function(){
     var surveyLink = $(this).children().html()
     copyToClipboard(surveyLink);
 
+})
+$(".graph").hide();
+
+$("button").on("click", function(){
+  $(".graph").hide();
+  $("." + this.className).show();
 })
 
 }); // closes document.ready DO NOT DELETE

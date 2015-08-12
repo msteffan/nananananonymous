@@ -1,19 +1,40 @@
-<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+<%= include_gon %>
 
 <h2>GA WDI <%=@event.name %> Lesson Feedback</h2>
 
+<button type="button" class="line">Line Graph</button>
+<button type="button" class="pie">Pie Graph</button>
+<button type="button" class="column">Column Graph</button>
+<button type="button" class="bar">Bar Graph</button>
+
 <div class="box">
-    <h3 class="graph-title">Comfort</h3>
-    <%= column_chart @responses.group(:comfort_score).count %>
+    <h3 class="graph-title comfort_title">Comfort</h3>
+    <div class="graph line">
+      <%= line_chart @responses.group(:comfort_score).count %>
+    </div>
+    <div class="graph pie">
+      <%= pie_chart @responses.group(:comfort_score).count %>
+    </div>
+    <div class="graph column">
+      <%= column_chart @responses.group(:comfort_score).count %>
+    </div>
+    <div class="graph bar">
+      <%= bar_chart @responses.group(:comfort_score).count %>
+    </div>
 </div>
 
 <div class="box">
-    <h3 class="graph-title">Completeness</h3>
-    <%= column_chart @responses.group(:completeness_score).count %>
+    <h3 class="graph-title complete_title">Completeness</h3>
+    <div class="graph line">
+      <%= line_chart @responses.group(:completeness_score).count %>
+    </div>
+    <div class="graph pie">
+      <%= pie_chart @responses.group(:completeness_score).count %>
+    </div>
+    <div class="graph column">
+      <%= column_chart @responses.group(:completeness_score).count %>
+    </div>
+    <div class="graph bar">
+      <%= bar_chart @responses.group(:completeness_score).count %>
+    </div>
 </div>
-
-<!-- # <% @event.responses.each do |response| %> -->
-
-<!-- stuff here -->
-<!-- # <%= response.comfort_score %>
-# <% end %> -->
