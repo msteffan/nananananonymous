@@ -14,17 +14,18 @@
  *= require_self
  */
 
-@font-face {
-     font-family: 'News706';
-     src: asset-url('tt0363m_.ttf');
-     font-weight: normal;
-     font-style: normal;
-
-}
+// @font-face {
+//      font-family: 'PFDinTextCompPro';
+//      src: asset-url('PFDinTextCompPro-Regular.ttf');
+//      font-weight: normal;
+//      font-style: normal;
+//
+// }
 
 @font-face {
     font-family: 'PFDinTextCompPro';
-    src: asset-url('/PFDinPro/PFDinTextCompPro-Regular.ttf') format('truetype');
+    src: asset-url("PFDinPro/PFDinTextCompPro-Bold.ttf") format("ttf");
+    // src: asset-url('PFDinPro/PFDinTextCompPro-Bold.ttf') format("ttf");
     font-weight: normal;
     font-style: normal;
 
@@ -32,6 +33,7 @@
 
 * {
     box-sizing: border-box;
+    font-family: georgia;
 }
 
 /******************** APPLICATION LAYOUT VIEW ********************/
@@ -40,7 +42,7 @@
 .header {
     background-color: black;
     width: 100%;
-    height: 3.5rem;
+    height: 4rem;
     line-height: 1.8;
     position: absolute;
     top: 0;
@@ -53,8 +55,7 @@
  h2 {
      text-align: center;
      font-size: 3em;
-     font-family: 'PFDinTextCompPro';
-     font-family: 'News706';
+     font-family: 'PFDinTextCompPro', helvetica;
      margin-top: 80px;
  }
 
@@ -68,16 +69,30 @@ a {
  }
 
  .header-text {
-     padding-left: 20px;
+     float: left;
      color: white;
-     font-size: 2em;
+     padding-top: 5px;
+     font-size: 1.75em;
      font-weight: bold;
      text-decoration: none;
+     font-family: helvetica;
+     display: inline-block;
 
  }
 
  .header-text:visited {
      color: white;
+ }
+
+ .logo {
+     float:left;
+     display: inline-block;
+     margin: 5px 0 0 5px;
+     height: 3rem;
+     width: 5%;
+     background-image: url("http://challenges.s3.amazonaws.com/mta-app-quest/GA_logo.png");
+     background-size: contain;
+     background-repeat: no-repeat;
  }
 
  footer {
@@ -97,12 +112,12 @@ a {
 /******************** INDEX VIEW ********************/
 #newLesson {
     margin: 0 auto;
-    font-size: 1em;
-    line-height: 1.8;
+    font-size: .75em;
+    line-height: 2.5;
     text-align: center;
     background-color: #FA4542;
     color: white;
-    width: 30%;
+    width: 300px;
     height: 60px;
     border-radius: 5px;
 }
@@ -175,6 +190,19 @@ button {
 .hidden-link {
     display: none;
 }
+
+@media (max-width: 1000px) {
+    .lesson-listing{
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px){
+    .surveyLink {
+        width: 100%;
+    }
+}
+
 /******************** LESSON REPORT VIEW ********************/
 
 h3 {
