@@ -18,7 +18,6 @@
 
 $(document).ready(function(){
     // this function expands the form for adding a new lesson
-    $("h3").empty();
 
      $("#newLesson").click(function(){
          if ($(window).width() >= 700){
