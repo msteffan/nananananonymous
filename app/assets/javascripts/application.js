@@ -87,4 +87,11 @@ $(".copy").on("click", function(){
 
 })
 
+$("#showComments").on("click", function(){
+    $(".comments-list").css("display", "block")
+
+});
+
+
+
 }); // closes document.ready DO NOT DELETE

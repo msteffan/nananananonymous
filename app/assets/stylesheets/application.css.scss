@@ -227,12 +227,21 @@ h3 {
     margin-top: 5px;
     text-align: center;
 }
+
+h4 {
+    margin: 0;
+    text-align: center;
+}
 .box {
     float: left;
     height: 400px;
     width: 50%;
     margin: 0 auto;
     border: 1px solid black;
+}
+
+.comments-list {
+    display: none;
 }
 
 
