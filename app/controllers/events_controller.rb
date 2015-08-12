@@ -2,12 +2,13 @@ class EventsController < ApplicationController
   # before_action :authenticate_user!, only: [:show, :create, :edit, :update, :destroy]
 
   def index
-    @events = Event.all
+    @events = Event.all.order('created_at DESC')
     @lesson = Event.new
   end
 
   def show
     @event = Event.find(params[:id])
+    @responses = @event.responses
   end
 
   def new
