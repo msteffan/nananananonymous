@@ -116,14 +116,14 @@ a {
      background-color: black;
      color: white;
      font-family: helvetica;
-     position: absolute;
+     position: fixed;
      width: 100%;
      left: 0;
-     /*bottom: 0;*/
+     bottom: 0;
      padding-left: 20px;
  }
 
-/******************** INDEX VIEW ********************/
+/******************** INDEX VIEW *******************/
 #newLesson {
     margin: 0 auto;
     font-size: .75em;

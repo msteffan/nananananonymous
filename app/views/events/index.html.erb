@@ -26,7 +26,7 @@
 <% @events.each do |event| %>
     <div class="lesson-listing">
         <h4 class="eventTitle">
-            <%= link_to event.name, event_path(event)%>
+            <%= link_to event.name, event_path(event)%>, <%= event.date %>
         </h4>
         <p class="icon surveyLink">
             <%= link_to "Go to live survey", new_event_response_path(event) %>
