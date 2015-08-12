@@ -19,15 +19,27 @@
 $(document).ready(function(){
     // this function expands the form for adding a new lesson
      $("#newLesson").click(function(){
-         $("#newLessonForm").animate({
-             width: "50%",
-             height: "350px",
-         }, 800, function(){
-            $("#newLessonForm").css({
-                "display": "block",
-                "margin-top": "50px"
-            })
-         });
+         if ($(window).width() >= 700){
+             $("#newLessonForm").animate({
+                     width: "50%",
+                     height: "350px",
+             }, 800, function(){
+                $("#newLessonForm").css({
+                    "display": "block",
+                    "margin-top": "50px"
+                })
+             });
+         } else {
+             $("#newLessonForm").animate({
+                     width: "100%",
+                     height: "350px",
+             }, 800, function(){
+                $("#newLessonForm").css({
+                    "display": "block",
+                    "margin-top": "50px"
+                })
+             });
+         }
      });
      // this function controls the form for editing an existing lesson
     $(".editForm").on("click", function(){
