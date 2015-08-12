@@ -1,4 +1,4 @@
-<h2>GA WDI Lessons</h2>
+<h2>GA WDI LESSONS</h2>
 
 <div id="newLesson">
     <h3>(+) Add new lesson</h3>
@@ -26,7 +26,7 @@
 <% @events.each do |event| %>
     <div class="lesson-listing">
         <h4 class="eventTitle">
-            <%= link_to event.name, event_path(event)%>
+            <%= link_to event.name, event_path(event)%>, <%= event.date %>
         </h4>
         <p class="icon surveyLink">
             <%= link_to "Go to live survey", new_event_response_path(event) %>
@@ -35,7 +35,7 @@
 
             <div class="hidden-link">Please take 1 minute to offer feedback on the <%= event.name %> lesson: http://localhost:3000<%= new_event_response_path(event) %></div>
         </div>
-        <div class="icon editForm"> Edit
+        <div class="icon editForm"> Edit the lesson
             <div class="showLessonForm">
                 <!-- this is a form to update the existing lesson (event) -->
                 <%= form_for event do |f| %>
@@ -60,8 +60,8 @@
         </div>
     </div>
 <% end %>
-<footer>
-    <p>This application was built in collaboration between GA DC UXDI and WDI students.
+<!-- <footer>
+    <p>This application was built in collaboration between GA DC UXDI and WDI students. -->
         <!-- Paul Doulatshahi, Mike Dulik, Mostafa Habib, Mark Hannallah, Virginia Ibarra, and Melissa Steffan. -->
-    </p>
-</footer>
+    <!-- </p>
+</footer> -->

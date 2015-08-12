@@ -25,15 +25,27 @@
 @font-face {
     font-family: 'PFDinTextCompPro';
     src: font-url("PFDinPro/PFDinTextCompPro-Bold.ttf");
-    // src: asset-url('PFDinPro/PFDinTextCompPro-Bold.ttf') format("ttf");
-    // font-weight: normal;
-    // font-style: normal;
+
+
+}
+
+@font-face {
+    font-family: 'News706';
+    src: font-url("News706/tt0365m_.ttf");
+
+
+}
+
+@font-face {
+    font-family: 'Circular';
+    src: font-url("Circular/CircularStd-Black.otf");
+
 
 }
 
 * {
     box-sizing: border-box;
-    font-family: georgia;
+    font-family: 'Circular';
 }
 
 /******************** APPLICATION LAYOUT VIEW ********************/
@@ -77,6 +89,8 @@ a {
      text-decoration: none;
      font-family: helvetica;
      display: inline-block;
+     font-family: 'PFDinTextCompPro', helvetica;
+
 
  }
 
@@ -101,15 +115,14 @@ a {
      text-align: center;
      background-color: black;
      color: white;
-     font-family: helvetica;
-     position: absolute;
+     font-family: "Circular";
+     position: relative;
      width: 100%;
-     left: 0;
-     /*bottom: 0;*/
+     bottom: 0;
      padding-left: 20px;
  }
 
-/******************** INDEX VIEW ********************/
+/******************* INDEX VIEW *******************/
 #newLesson {
     margin: 0 auto;
     font-size: .75em;
@@ -214,12 +227,21 @@ h3 {
     margin-top: 5px;
     text-align: center;
 }
+
+h4 {
+    margin: 0;
+    text-align: center;
+}
 .box {
     float: left;
     height: 400px;
     width: 50%;
     margin: 0 auto;
     border: 1px solid black;
+}
+
+.comments-list {
+    display: none;
 }
 
 
