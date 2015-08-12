@@ -25,15 +25,27 @@
 @font-face {
     font-family: 'PFDinTextCompPro';
     src: font-url("PFDinPro/PFDinTextCompPro-Bold.ttf");
-    // src: asset-url('PFDinPro/PFDinTextCompPro-Bold.ttf') format("ttf");
-    // font-weight: normal;
-    // font-style: normal;
+
+
+}
+
+@font-face {
+    font-family: 'News706';
+    src: font-url("News706/tt0365m_.ttf");
+
+
+}
+
+@font-face {
+    font-family: 'Circular';
+    src: font-url("Circular/CircularStd-Black.otf");
+
 
 }
 
 * {
     box-sizing: border-box;
-    font-family: georgia;
+    font-family: 'Circular';
 }
 
 /******************** APPLICATION LAYOUT VIEW ********************/
@@ -77,6 +89,8 @@ a {
      text-decoration: none;
      font-family: helvetica;
      display: inline-block;
+     font-family: 'PFDinTextCompPro', helvetica;
+
 
  }
 
