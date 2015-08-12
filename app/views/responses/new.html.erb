@@ -5,9 +5,9 @@
         <div class="radio">
             <%= f.radio_button :comfort_score, 1 %> 1
         </div>
-        <div class="radio">
-        <%= f.radio_button :comfort_score, 2 %> 2
-        </div>
+        <%= f.label(:comfort_score_2, class: "radio") do %>
+          <%= f.radio_button :comfort_score, 2 %> 2
+        <% end %>
         <div class="radio">
         <%= f.radio_button :comfort_score, 3 %> 3
         </div>
