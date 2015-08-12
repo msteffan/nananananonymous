@@ -6,6 +6,8 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.highcharts.com/stock/highstock.js"></script>
 </head>
 <body>
     <div class="header">
@@ -14,7 +16,7 @@
     </div>
 
 <%= yield %>
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
 </body>
 </html>

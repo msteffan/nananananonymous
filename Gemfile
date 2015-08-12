@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 gem 'pg'
+gem 'groupdate'
 gem 'devise'
+gem 'chartkick'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record

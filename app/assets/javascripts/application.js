@@ -87,10 +87,4 @@ $(".copy").on("click", function(){
 
 })
 
-
-
-
- // });
-
-
 }); // closes document.ready DO NOT DELETE
