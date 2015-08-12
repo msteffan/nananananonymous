@@ -5,6 +5,7 @@ class CreateResponses < ActiveRecord::Migration
       t.integer :completeness_score
       t.timestamps
       t.string :name
+      t.string :comment
       t.references :event, index: true, foreign_key: true
     end
   end

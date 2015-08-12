@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20150810200156) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "comment"
     t.integer  "event_id"
   end
 
