@@ -1,6 +1,8 @@
-<h2>GA WDI Lesson Feedback</h2>
+<h2>GA WDI Lessons</h2>
 
-<h3 id="newLesson">(+) Add new lesson</h3>
+<div id="newLesson">
+    <h3>(+) Add new lesson</h3>
+</div>
 
 <div id="newLessonForm">
     <!-- this is a form to create @Lesson.new -->
@@ -26,9 +28,13 @@
         <h4 class="eventTitle">
             <%= link_to event.name, event_path(event)%>
         </h4>
-        <p>
-            <%= link_to "Get survey link", new_event_response_path(event) %>
+        <p class="icon surveyLink">
+            <%= link_to "Go to live survey", new_event_response_path(event) %>
         </p>
+        <div class="copy icon surveyLink">Copy link to clipboard
+
+            <div class="hidden-link">http://localhost:3000<%= new_event_response_path(event) %></div>
+        </div>
         <div class="icon editForm"> Edit
             <div class="showLessonForm">
                 <!-- this is a form to update the existing lesson (event) -->

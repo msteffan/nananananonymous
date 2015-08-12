@@ -17,27 +17,30 @@
 
 
 $(document).ready(function(){
-    // this function controls clicks on Guardian content (if it has been loaded after a search) and controls expanding/descreasing the size of the columns
+    // this function expands the form for adding a new lesson
      $("#newLesson").click(function(){
          $("#newLessonForm").animate({
              width: "50%",
-             height: "150px",
+             height: "350px",
          }, 800, function(){
-            $("#newLessonForm").css("display", "block")
+            $("#newLessonForm").css({
+                "display": "block",
+                "margin-top": "50px"
+            })
          });
      });
-
+     // this function controls the form for editing an existing lesson
     $(".editForm").on("click", function(){
          var self = this;
          $(self).children().animate({
              width: "100%",
-             height: "150px"
+             height: "370px"
          }, 1000, function(){
              $(self).children().css("display", "block")
          });
 
      });
-
+     // this function hides a form if the user hits "cancel"
      $(".hideForm").on("click", function(){
          event.stopPropagation()
          var self = this;
@@ -51,6 +54,33 @@ $(document).ready(function(){
 
      });
 
+// this function lets the instructor copy the survey link to his/her clipboard with a single click
+function copyToClipboard(link){
+	var copyDiv = document.createElement('div');
+	copyDiv.contentEditable = true;
+	document.body.appendChild(copyDiv);
+    copyDiv.innerHTML = link;
+	copyDiv.unselectable = "off";
+    copyDiv.focus();
+	document.execCommand('SelectAll');
+	document.execCommand("Copy", false, null);
+	document.body.removeChild(copyDiv);
+	// window.scroll(0,0);
+}
+
+// on click, collect the html with the link address in it, then pass into copyToClipboard
+$(".copy").on("click", function(){
+    var surveyLink = $(this).children().html()
+    copyToClipboard(surveyLink);
+
+})
+
+
+
+
+ // });
+
+///////////////////////// HIGHCHARTS HERE ////////////////////////////////
      $(function () {
      $('#comfort_chart').highcharts({
          chart: {

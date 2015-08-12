@@ -33,31 +33,90 @@
 * {
     box-sizing: border-box;
 }
+
+/******************** APPLICATION LAYOUT VIEW ********************/
+
+
+.header {
+    background-color: black;
+    width: 100%;
+    height: 3.5rem;
+    line-height: 1.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+
  h2 {
      text-align: center;
      font-size: 3em;
      font-family: 'PFDinTextCompPro';
      font-family: 'News706';
+     margin-top: 80px;
  }
 
 a {
     color: black;
     text-decoration: none;
+
 }
  a:visited {
      color: black;
  }
 
+ .header-text {
+     padding-left: 20px;
+     color: white;
+     font-size: 2em;
+     font-weight: bold;
+     text-decoration: none;
+
+ }
+
+ .header-text:visited {
+     color: white;
+ }
+
 /******************** INDEX VIEW ********************/
 #newLesson {
-    font-size: 2em;
+    margin: 0 auto;
+    font-size: 1em;
+    line-height: 1.8;
     text-align: center;
-    color: #2E7AC8;
+    background-color: #FA4542;
+    color: white;
+    width: 30%;
+    height: 60px;
+    border-radius: 5px;
+}
+
+#newLesson:hover {
+    background-color: #F6201D;
 }
 
 #newLessonForm {
     display: none;
     margin: 0 auto;
+}
+
+label {
+    font-size: 24px;
+    font-family: helvetica;
+}
+
+button {
+    margin: 0 auto;
+    font-size: 1em;
+    line-height: 1.8;
+    text-align: center;
+    background-color: grey;
+    color: white;
+    width: 30%;
+    height: 50px;
+    border-radius: 5px;
 }
 
 .lesson-listing {
@@ -66,7 +125,9 @@ a {
     border-radius: 5px;
     padding: 10px;
     margin: 10px auto;
-    background-color: lightgrey;
+    background-color: #ECECEC;
+    font-size: 1.5em;
+    font-family: helvetica;
 }
 
 .showLessonForm {
@@ -79,15 +140,27 @@ a {
     width:100%;
     padding: 10px 0 10px 10px;
     border-radius: 2px;
-    background-color: #FA4542;
+    background-color: #FFFFFF;
+    cursor: pointer;
 }
 
 .icon:hover {
-    outline: 2px solid white;
+    outline: 6px solid #FBD334;
     outline-offset:-5px;
+
 }
 
+.surveyLink {
+    width: 49.4%;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+.hidden-link {
+    display: none;
+}
 /******************** LESSON REPORT VIEW ********************/
 
 h3 {
@@ -101,4 +174,76 @@ h3 {
     width: 50%;
     margin: 0 auto;
     border: 1px solid black;
+}
+
+
+/******************** RESPONSE NEW VIEW ********************/
+
+.score {
+    display: inline-block;
+    width: 49%;
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #ECECEC;
+    font-size: 1.5em;
+    font-family: helvetica;
+    height: 200px;
+    margin-left: 7px;
+    text-align: center;
+
+}
+
+.radio{
+    border: 1px solid #FA4542;
+    background-color: #FA4542;
+    width: 15%;
+    display: inline-block;
+    margin-left: -3px;
+    height: 50px;
+    line-height: 1.8;
+}
+
+.radio:hover {
+    background-color: #F6201D;
+    outline: 7px solid #FBD334;
+    outline-offset:-3px;
+}
+
+.name-box {
+    font-family: helvetica;
+    background-color: #ECECEC;
+    width: 50%;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+input[type="text"]{
+    height: 50px;
+    line-height: 2;
+    width: 98%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+}
+
+input[type="submit"]{
+    margin: 0 auto;
+    font-size: 1em;
+    line-height: 1.8;
+    text-align: center;
+    background-color: #FA4542;
+    color: white;
+    width: 98%;
+    height: 60px;
+    border-radius: 5px;
+}
+input[type="submit"]:hover{
+    background-color:#F6201D
+}
+
+.submit-button {
+    width: 30%;
+    margin: 0 auto;
 }

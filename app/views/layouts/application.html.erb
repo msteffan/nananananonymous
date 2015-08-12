@@ -8,6 +8,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <div class="header">
+        <%= link_to "GENERAL ASSEMBLY WDI", events_path, { :class => "header-text"}%>
+    </div>
 
 <%= yield %>
 

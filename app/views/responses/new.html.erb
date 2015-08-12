@@ -1,26 +1,47 @@
-<h2> Add Response </h2>
+<h2> Add Feedback for <%= @event.name %> </h2>
 <%= form_for [@event, @response] do |f|  %>
-    <div>
-        <p><%= label :comfort_score, "How comfortable are you with the skills in this assignment?" %></p>
-        <%= f.radio_button :comfort_score, 1 %> 1
+    <div class="score">
+        <p><%= label :comfort_score, "How comfortable are you with this assignment?" %></p>
+        <div class="radio">
+            <%= f.radio_button :comfort_score, 1 %> 1
+        </div>
+        <div class="radio">
         <%= f.radio_button :comfort_score, 2 %> 2
+        </div>
+        <div class="radio">
         <%= f.radio_button :comfort_score, 3 %> 3
+        </div>
+        <div class="radio">
         <%= f.radio_button :comfort_score, 4 %> 4
+        </div>
+        <div class="radio">
         <%= f.radio_button :comfort_score, 5 %> 5
+        </div>
     </div>
-    <div>
+    <div class="score">
         <p><%= label_tag :completeness_score, "How complete is this assignment?" %></p>
+        <div class="radio">
         <%= f.radio_button :completeness_score, 1 %> 1
+        </div>
+        <div class="radio">
         <%= f.radio_button :completeness_score, 2 %> 2
+        </div>
+        <div class="radio">
         <%= f.radio_button :completeness_score, 3 %> 3
+        </div>
+        <div class="radio">
         <%= f.radio_button :completeness_score, 4 %> 4
+        </div>
+        <div class="radio">
         <%= f.radio_button :completeness_score, 5 %> 5
+        </div>
     </div>
-    <%= f.hidden_field :event_id, :value => @event.id %>
-
-    <p>Name</p>
-    <%= f.text_field :name %>
-    <p>
-    <%= f.submit 'Submit' %>
-    </p>
+    <%# f.hidden_field :event_id, :value => @event.id %>
+    <div class="name-box">
+        <p>This survey is anonymous. If you'd like to include your name for instructor use only, enter it here.</p>
+        <%= f.text_field :name %>
+    </div>
+    <div class="submit-button">
+        <%= f.submit 'SUBMIT' %>
+    </div>
 <% end %>
