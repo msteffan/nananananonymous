@@ -2,39 +2,49 @@
 <%= form_for [@event, @response] do |f|  %>
     <div class="score">
         <p><%= label :comfort_score, "How comfortable are you with this assignment?" %></p>
-        <div class="radio">
+
+        <%= f.label(:comfort_score_1, class: "radio") do %>
             <%= f.radio_button :comfort_score, 1 %> 1
-        </div>
+        <% end %>
+
         <%= f.label(:comfort_score_2, class: "radio") do %>
           <%= f.radio_button :comfort_score, 2 %> 2
         <% end %>
-        <div class="radio">
+
+        <%= f.label(:comfort_score_3, class: "radio") do %>
         <%= f.radio_button :comfort_score, 3 %> 3
-        </div>
-        <div class="radio">
+        <% end %>
+
+        <%= f.label(:comfort_score_4, class: "radio") do %>
         <%= f.radio_button :comfort_score, 4 %> 4
-        </div>
-        <div class="radio">
+        <% end %>
+
+        <%= f.label(:comfort_score_5, class: "radio") do %>
         <%= f.radio_button :comfort_score, 5 %> 5
-        </div>
+        <% end %>
     </div>
     <div class="score">
         <p><%= label_tag :completeness_score, "How complete is this assignment?" %></p>
-        <div class="radio">
+
+        <%= f.label(:completeness_score_1, class: "radio") do %>
         <%= f.radio_button :completeness_score, 1 %> 1
-        </div>
-        <div class="radio">
+        <% end %>
+
+        <%= f.label(:completeness_score_2, class: "radio") do %>
         <%= f.radio_button :completeness_score, 2 %> 2
-        </div>
-        <div class="radio">
+        <% end %>
+
+        <%= f.label(:completeness_score_3, class: "radio") do %>
         <%= f.radio_button :completeness_score, 3 %> 3
-        </div>
-        <div class="radio">
+        <% end %>
+
+        <%= f.label(:completeness_score_4, class: "radio") do %>
         <%= f.radio_button :completeness_score, 4 %> 4
-        </div>
-        <div class="radio">
+        <% end %>
+
+        <%= f.label(:completeness_score_5, class: "radio") do %>
         <%= f.radio_button :completeness_score, 5 %> 5
-        </div>
+        <% end %>
     </div>
     <%# f.hidden_field :event_id, :value => @event.id %>
     <div class="name-box">
