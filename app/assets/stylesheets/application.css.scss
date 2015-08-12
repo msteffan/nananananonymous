@@ -24,10 +24,10 @@
 
 @font-face {
     font-family: 'PFDinTextCompPro';
-    src: asset-url("PFDinPro/PFDinTextCompPro-Bold.ttf") format("ttf");
+    src: font-url("PFDinPro/PFDinTextCompPro-Bold.ttf");
     // src: asset-url('PFDinPro/PFDinTextCompPro-Bold.ttf') format("ttf");
-    font-weight: normal;
-    font-style: normal;
+    // font-weight: normal;
+    // font-style: normal;
 
 }
 
@@ -265,7 +265,7 @@ h3 {
     padding: 20px;
 }
 
-input[type="text"]{
+input[type="text"], textarea {
     height: 50px;
     line-height: 2;
     width: 98%;
