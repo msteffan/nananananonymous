@@ -18,7 +18,6 @@
 
 $(document).ready(function(){
     // this function expands the form for adding a new lesson
-
      $("#newLesson").click(function(){
          if ($(window).width() >= 700){
              $("#newLessonForm").animate({
@@ -89,14 +88,13 @@ $(".copy").on("click", function(){
 })
 $(".graph").hide();
 
-$("button").on("click", function(){
+$(".graph-button").on("click", function(){
   $(".graph").hide();
-  $("." + this.className).show();
+  $("." + this.className.split(' ')[1]).show();
 })
 
 $("#showComments").on("click", function(){
     $(".comments-list").css("display", "block")
-
 });
 
 
