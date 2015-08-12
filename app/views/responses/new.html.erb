@@ -38,6 +38,11 @@
     </div>
     <%# f.hidden_field :event_id, :value => @event.id %>
     <div class="name-box">
+        <p>Add additional comments here.</p>
+        <%= f.text_area :comment %>
+    </div>
+
+    <div class="name-box">
         <p>This survey is anonymous. If you'd like to include your name for instructor use only, enter it here.</p>
         <%= f.text_field :name %>
     </div>

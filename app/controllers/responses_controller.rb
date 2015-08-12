@@ -45,6 +45,6 @@ class ResponsesController < ApplicationController
 
   private
     def response_params
-        params.require(:response).permit(:comfort_score, :completeness_score, :name)
+        params.require(:response).permit(:comfort_score, :completeness_score, :name, :comment)
     end
 end
