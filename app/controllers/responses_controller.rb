@@ -19,7 +19,7 @@ class ResponsesController < ApplicationController
     @response = Response.new(response_params)
     # not the most elegant solution (below) but it works; can refactor
     @response.event_id = @event.id
-    @response.save
+    @response.save   # we might not need this
     if @response.save
       render "responses/thanks"
     # else
