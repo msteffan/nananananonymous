@@ -287,6 +287,16 @@ h4 {
     display: block;
 }
 
+@media (max-width: 700px){
+    .box {
+        width: 100%;
+    }
+    #showComments {
+        width: 100%;
+    }
+
+}
+
 /******************** RESPONSE NEW VIEW ********************/
 
 .score {

@@ -35,17 +35,15 @@
 <button id="showComments"><h4>Student Comments</h4></button>
 <div class="comments-list">
      <% @event.responses.each do |response| %>
-
-    <div class="comment name-box">
-        <% if response.name == "" %>
-            Anonymous:
-        <% else %>
-            <%= response.name %>:
-
-        <% end %>
-        <%= response.comment %>
-    </div>
-
+        <div class="comment name-box">
+            <p><%= response.comment %></p>
+            <% if response.name == "" %>
+                <p>Anonymous
+            <% else %>
+                <p><%= response.name %>
+            <% end %>
+            (Comfort: <%= response.comfort_score %>, Completeness: <%= response.completeness_score %>)</p>
+        </div>
     <% end %>
 </div>
 <script>
