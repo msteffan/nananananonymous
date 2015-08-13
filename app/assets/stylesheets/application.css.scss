@@ -22,30 +22,53 @@
 //
 // }
 
+
+// @font-face {
+//   font-family: "PFDin";
+//   src: url("http://ericaandersen.net/fonts/PF%20Din%20Text%20Comp%20Pro%20Bold.ttf%22") format("tff");
+//   font-style: normal;
+//   font-weight: normal;
+// }
+
+// @font-face {
+//   font-family: "News706";
+//   src: url("News706 BT Roman.ttf") format("ttf");
+//   font-style: normal;
+//   font-weight: normal;
+// }
+
+@font-face {
+ font-family: "Avenir";
+ src: url("http://ericaandersen.net/fonts/Avenir.ttc") format("ttc");
+ font-style: normal;
+ font-weight: normal;
+}
+
+
 @font-face {
     font-family: 'PFDinTextCompPro';
     src: font-url("PFDinPro/PFDinTextCompPro-Bold.ttf");
 
 
 }
-
+//
 @font-face {
     font-family: 'News706';
     src: font-url("News706/tt0365m_.ttf");
 
 
 }
-
-@font-face {
-    font-family: 'Circular';
-    src: font-url("Circular/CircularStd-Black.otf");
-
-
-}
+//
+// @font-face {
+//     font-family: 'Circular';
+//     src: font-url("Circular/CircularStd-Black.otf");
+//
+//
+// }
 
 * {
     box-sizing: border-box;
-    font-family: 'Circular';
+    font-family: 'Avenir';
 }
 
 /******************** APPLICATION LAYOUT VIEW ********************/
@@ -67,7 +90,8 @@
  h2 {
      text-align: center;
      font-size: 3em;
-     font-family: 'PFDinTextCompPro', helvetica;
+
+     font-family: "PFDinTextCompPro";
      margin-top: 80px;
  }
 
