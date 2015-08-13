@@ -76,7 +76,7 @@ function copyToClipboard(link){
 	document.execCommand('SelectAll');
 	document.execCommand("Copy", false, null);
 	document.body.removeChild(copyDiv);
-	// window.scroll(0,0);
+	window.scroll(this);
 }
 
 // on click, collect the html with the link address in it, then pass into copyToClipboard

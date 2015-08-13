@@ -1,0 +1,387 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+@font-face {
+  font-family: "Avenir";
+  src: url("http://ericaandersen.net/fonts/Avenir.ttc") format("ttc");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'PFDinTextCompPro';
+  src: url(/assets/PFDinPro/PFDinTextCompPro-Bold-97f95893f45362a47669e47035d1402c7815c90a10344d7d4d316789f3318be1.ttf);
+}
+@font-face {
+  font-family: 'News706';
+  src: url(/assets/News706/tt0365m_-0a56905891083e5027f9cc2cc95b5b4409b5f470bcf92a5d7b8b5bb4031c6f82.ttf);
+}
+/* line 69, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+* {
+  box-sizing: border-box;
+  font-family: 'Avenir';
+}
+
+/******************** APPLICATION LAYOUT VIEW ********************/
+/* line 77, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.header {
+  background-color: black;
+  width: 100%;
+  height: 4rem;
+  line-height: 1.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* line 90, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+h2 {
+  text-align: center;
+  font-size: 3em;
+  font-family: "PFDinTextCompPro";
+  margin-top: 80px;
+}
+
+/* line 98, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* line 103, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+a:visited {
+  color: black;
+}
+
+/* line 107, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.header-text {
+  float: left;
+  color: white;
+  padding-top: 5px;
+  font-size: 1.75em;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: helvetica;
+  display: inline-block;
+  font-family: 'PFDinTextCompPro', helvetica;
+}
+
+/* line 121, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.header-text:visited {
+  color: white;
+}
+
+/* line 125, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.logo {
+  float: left;
+  display: inline-block;
+  margin: 5px 5px 0 5px;
+  height: 50px;
+  width: 50px;
+  background-image: url("https://raw.githubusercontent.com/msteffan/nananananonymous/master/app/assets/images/GA_logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* line 136, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+footer {
+  margin-top: 20px;
+  height: 60px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: "Circular";
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  padding-left: 20px;
+}
+
+/******************* INDEX VIEW *******************/
+/* line 150, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+#newLesson {
+  margin: 0 auto;
+  font-size: .75em;
+  line-height: 2.5;
+  text-align: center;
+  background-color: #FA4542;
+  color: white;
+  width: 300px;
+  height: 60px;
+  border-radius: 5px;
+}
+
+/* line 162, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+#newLesson:hover {
+  background-color: #F6201D;
+}
+
+/* line 166, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+#newLessonForm {
+  display: none;
+  margin: 0 auto;
+}
+
+/* line 171, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+label {
+  font-size: 24px;
+  font-family: helvetica;
+}
+
+/* line 176, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+button {
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 1.8;
+  text-align: center;
+  background-color: grey;
+  color: white;
+  width: 30%;
+  height: 50px;
+  border-radius: 5px;
+}
+
+/* line 188, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.lesson-listing {
+  width: 50%;
+  /*border: 1px solid grey;*/
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: #ECECEC;
+  font-size: 1.5em;
+  font-family: helvetica;
+}
+
+/* line 199, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.showLessonForm {
+  display: none;
+}
+
+/* line 203, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.icon {
+  border: 1px solid white;
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 0 10px 10px;
+  border-radius: 2px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+/* line 213, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.icon:hover {
+  outline: 6px solid #FBD334;
+  outline-offset: -5px;
+}
+
+/* line 219, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.surveyLink {
+  width: 49.4%;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* line 227, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.hidden-link {
+  display: none;
+}
+
+@media (max-width: 1180px) {
+  /* line 232, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  .surveyLink {
+    width: 100%;
+  }
+
+  /* line 235, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  #newLessonForm {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  /* line 242, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  .lesson-listing {
+    width: 100%;
+  }
+}
+/******************** LESSON REPORT VIEW ********************/
+/* line 249, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+h3 {
+  font-size: 2em;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* line 255, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+h4 {
+  margin: 0;
+  text-align: center;
+}
+
+/* line 259, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.box {
+  float: left;
+  height: 400px;
+  width: 50%;
+  margin: 0 auto 40px auto;
+  border: 1px solid black;
+}
+
+/* line 267, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.button-wrapper {
+  width: 25%;
+  margin: 0 auto 40px auto;
+}
+
+/* line 272, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.graph-button {
+  width: 100%;
+}
+
+/* line 275, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.button-holder {
+  margin: 0 auto;
+  width: 150px;
+  display: inline-block;
+}
+
+/* line 281, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.comments-list {
+  display: none;
+}
+
+/* line 285, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+#showComments {
+  margin: 0 auto 40px auto;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  /* line 291, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  .box {
+    width: 100%;
+  }
+
+  /* line 294, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  #showComments {
+    width: 100%;
+  }
+}
+/******************** RESPONSE NEW VIEW ********************/
+/* line 302, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.score {
+  display: inline-block;
+  width: 49%;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: #ECECEC;
+  font-size: 1.5em;
+  font-family: helvetica;
+  height: 200px;
+  margin-left: 7px;
+  text-align: center;
+}
+
+/* line 318, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.radio {
+  border: 1px solid #FA4542;
+  background-color: #FA4542;
+  width: 15%;
+  display: inline-block;
+  margin-left: -3px;
+  height: 50px;
+  line-height: 1.8;
+}
+
+/* line 328, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.radio:hover {
+  background-color: #F6201D;
+  outline: 7px solid #FBD334;
+  outline-offset: -3px;
+}
+
+/* line 334, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.name-box {
+  font-family: helvetica;
+  background-color: #ECECEC;
+  width: 50%;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* line 342, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+input[type="text"], textarea {
+  height: 50px;
+  line-height: 2;
+  width: 98%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* line 351, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+input[type="submit"] {
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 1.8;
+  text-align: center;
+  background-color: #FA4542;
+  color: white;
+  width: 98%;
+  height: 60px;
+  border-radius: 5px;
+}
+
+/* line 362, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+input[type="submit"]:hover {
+  background-color: #F6201D;
+}
+
+/* line 366, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.submit-button {
+  width: 30%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+  /* line 372, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  .score {
+    display: block;
+    margin: 10px auto;
+  }
+}
+@media (max-width: 1100px) {
+  /* line 379, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  .score {
+    display: block;
+    margin: 10px auto;
+  }
+}
+@media (max-width: 700px) {
+  /* line 387, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  .score {
+    width: 100%;
+  }
+
+  /* line 390, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  .name-box {
+    width: 100%;
+  }
+}
