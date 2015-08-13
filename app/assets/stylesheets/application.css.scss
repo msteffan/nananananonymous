@@ -33,8 +33,6 @@
 @font-face {
     font-family: 'News706';
     src: font-url("News706/tt0365m_.ttf");
-
-
 }
 
 
@@ -49,7 +47,7 @@
 .header {
     background-color: black;
     width: 100%;
-    height: 4rem;
+    height: 8em;
     line-height: 1.8;
     position: absolute;
     top: 0;
@@ -63,7 +61,6 @@
  h2 {
      text-align: center;
      font-size: 3em;
-
      font-family: "PFDinTextCompPro";
      margin-top: 80px;
  }
@@ -81,7 +78,7 @@ a {
      float: left;
      color: white;
      padding-top: 5px;
-     font-size: 1.75em;
+     font-size: 4.75em;
      font-weight: bold;
      text-decoration: none;
      font-family: helvetica;
@@ -99,8 +96,8 @@ a {
      float:left;
      display: inline-block;
      margin: 5px 5px 0 5px;
-     height: 50px;
-     width: 50px;
+     height: 7rem;
+     width: 7rem;
      background-image: url("https://raw.githubusercontent.com/msteffan/nananananonymous/master/app/assets/images/GA_logo.png");
      background-size: cover;
      background-repeat: no-repeat;
@@ -120,100 +117,202 @@ a {
  }
 
 /******************* INDEX VIEW *******************/
-#newLesson {
+
+main {
+    width: 85vw;
+    padding-top: 8em;
     margin: 0 auto;
-    font-size: .75em;
+}
+.title-box h2 {
+    margin: 0;
+    text-align: left;
+}
+.lessons-box {
+    width: 100%;
+    background-color: #C3C3C3;
+}
+.new-lesson-box {
+    width: 100%;
+    height: 125px;
+    background-color: #ECECEC;
+    font-family: "PFDinTextCompPro"
+
+}
+
+#newLesson h3 {
+    font-family: "PFDinTextCompPro";
+    height: 100px;
+    font-size: 2.5rem;
     line-height: 2.5;
-    text-align: center;
-    background-color: #FA4542;
-    color: white;
-    width: 300px;
-    height: 60px;
+    color: black;
     border-radius: 5px;
-}
+    text-align: left;
+    cursor: pointer;
+    padding: 20px 20px 20px 50px;
 
-#newLesson:hover {
-    background-color: #F6201D;
 }
-
+//
+// #newLesson:hover {
+//     background-color: #F6201D;
+// }
+//
 #newLessonForm {
     display: none;
     margin: 0 auto;
 }
-
-label {
-    font-size: 24px;
-    font-family: helvetica;
-}
-
-button {
-    margin: 0 auto;
-    font-size: 1em;
-    line-height: 1.8;
-    text-align: center;
-    background-color: grey;
-    color: white;
-    width: 30%;
-    height: 50px;
-    border-radius: 5px;
-}
-
+//
+// label {
+//     font-size: 24px;
+//     font-family: helvetica;
+// }
+//
+// button {
+//     margin: 0 auto;
+//     font-size: 1em;
+//     line-height: 1.8;
+//     text-align: center;
+//     background-color: grey;
+//     color: white;
+//     width: 30%;
+//     height: 50px;
+//     border-radius: 5px;
+// }
+//
 .lesson-listing {
-    width: 50%;
-    /*border: 1px solid grey;*/
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px auto;
-    background-color: #ECECEC;
-    font-size: 1.5em;
-    font-family: helvetica;
+    // width: 50%;
+    text-transform: uppercase;
+    border-bottom: 1px solid lightgrey;
+    padding: 50px;
+    // border-radius: 5px;
+
 }
+    .eventTitle {
+        width: 90%;
+        margin-right: 0;
+        font-size: 3rem;
+        font-family: "PFDinTextCompPro";
+        text-align: left;
+
+    }
+    .date {
+        font-family: 'Avenir';
+        font-size: 1rem;
+        color: #888888;
+    }
 
 .showLessonForm {
     display: none;
+    background-color: #BE0200;
+    padding: 20px;
 }
-
+//
 .icon {
+    text-transform: none;
+    // font-weight: bold;
+    font-size: 1.25rem;
     border: 1px solid white;
     margin-top: 10px;
-    width:100%;
-    padding: 10px 0 10px 10px;
-    border-radius: 2px;
-    background-color: #FFFFFF;
+    width:auto;
+    display: inline-block;
+    padding: 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: #FA4542;
+    color: white;
+    box-shadow: 2px 2px #888888;
     cursor: pointer;
 }
 
-.icon:hover {
-    outline: 6px solid #FBD334;
-    outline-offset:-5px;
+.icon a {
+    color: white;
+}
+
+.resultsIcon {
+    display: block;
+    float: right;
+    padding-right: 50px;
+}
+.resultsIcon a {
+    display: block;
+    font-weight: bold;
 
 }
 
-.surveyLink {
-    width: 49.4%;
-    margin: 0 auto;
+.edit-form {
+    width: 48%;
     display: inline-block;
-    text-align: center;
-    margin-bottom: 20px;
+}
+.edit-date-form {
+    width: 20%;
+    display: inline-block;
 }
 
+input[type="submit"]{
+    margin: 0 auto;
+    font-size: 1.5em;
+    line-height: 1.8;
+    text-align: center;
+    background-color: #818181;
+    color: white;
+    width: 220px;
+    display: inline-block;
+    height: 60px;
+    border-radius: 5px;
+
+}
+input[type="submit"]:hover{
+    background-color:#888888;
+}
+
+.submit-button {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.hideForm {
+    line-height: 3;
+    display: inline-block;
+    cursor: pointer;
+    color:lightgrey;
+    padding-left: 10px;
+    // float: right;
+}
+//
+// .icon:hover {
+//     outline: 6px solid #FBD334;
+//     outline-offset:-5px;
+//
+// }
+//
+// .surveyLink {
+//     width: 49.4%;
+//     margin: 0 auto;
+//     display: inline-block;
+//     text-align: center;
+//     margin-bottom: 20px;
+// }
+//
 .hidden-link {
     display: none;
 }
-
-@media (max-width: 1180px) {
-    .surveyLink{
-        width: 100%;
-    }
-    #newLessonForm{
-        width: 100%;
-    }
-
-}
-
+//
+// @media (max-width: 1180px) {
+//     .surveyLink{
+//         width: 100%;
+//     }
+//     #newLessonForm{
+//         width: 100%;
+//     }
+//
+// }
+//
 @media (max-width: 700px){
     .lesson-listing {
         width: 100%;
+    }
+    .header-text {
+        line-height: 3;
+        font-size: 36px;
     }
 }
 
@@ -321,25 +420,6 @@ input[type="text"], textarea {
     font-size: 24px;
 }
 
-input[type="submit"]{
-    margin: 0 auto;
-    font-size: 1em;
-    line-height: 1.8;
-    text-align: center;
-    background-color: #FA4542;
-    color: white;
-    width: 98%;
-    height: 60px;
-    border-radius: 5px;
-}
-input[type="submit"]:hover{
-    background-color:#F6201D
-}
-
-.submit-button {
-    width: 30%;
-    margin: 0 auto;
-}
 
 @media (max-width: 1100px){
     .score {

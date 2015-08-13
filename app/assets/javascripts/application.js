@@ -43,25 +43,17 @@ $(document).ready(function(){
      // this function controls the form for editing an existing lesson
     $(".editForm").on("click", function(){
          var self = this;
-         $(self).children().animate({
-             width: "100%",
-             height: "370px"
-         }, 1000, function(){
-             $(self).children().css("display", "block")
-         });
+         var clickedDiv = $(self).parent();
+         $(clickedDiv).children(".showLessonForm").toggle("display")
 
      });
      // this function hides a form if the user hits "cancel"
      $(".hideForm").on("click", function(){
          event.stopPropagation()
          var self = this;
-         $(self).parent().animate({
-             width: "0",
-             height: "0"
-         }, 800, function(){
-             $(self).parent().css("display", "none")
+         $(self).parent().parent().toggle("display")
 
-         });
+
 
      });
 

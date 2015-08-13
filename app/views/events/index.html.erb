@@ -1,65 +1,78 @@
-<h2>GA WDI LESSONS</h2>
-
-<div id="newLesson">
-    <h3>(+) Add new lesson</h3>
-</div>
-
-<div id="newLessonForm">
-    <!-- this is a form to create @Lesson.new -->
-    <%= form_for @lesson do |f| %>
-        <p>
-            <%= f.label :name %>
-            <%= f.text_field :name %>
-        </p>
-        <p>
-            <%= f.label :date %>
-            <%= f.text_field :date %>
-        </p>
-        <%# f.hidden_field :user_id, :value => @user.id %>
-        <p>
-            <%= f.submit "Create Feedback Form" %>
-        </p>
-    <% end %>
-    <button type="button" name="button" class="hideForm">Cancel</button>
-</div>
-
-<% @events.each do |event| %>
-    <div class="lesson-listing">
-        <h4 class="eventTitle">
-            <%= link_to event.name, event_path(event)%>, <%= event.date %>
-        </h4>
-        <p class="icon surveyLink">
-            <%= link_to "Go to live survey", new_event_response_path(event) %>
-        </p>
-        <div class="copy icon surveyLink">Copy link to clipboard
-
-            <div class="hidden-link">Please take 1 minute to offer feedback on the <%= event.name %> lesson: http://localhost:3000<%= new_event_response_path(event) %></div>
-        </div>
-        <div class="icon editForm"> Edit the lesson
-            <div class="showLessonForm">
-                <!-- this is a form to update the existing lesson (event) -->
-                <%= form_for event do |f| %>
-                    <p>
-                        <%= f.label :name %>
-                        <%= f.text_field :name %>
-                    </p>
-                    <p>
-                        <%= f.label :date %>
-                        <%= f.text_field :date %>
-                    </p>
-                    <%# f.hidden_field :user_id, :value => @user.id %>
-                    <p>
-                        <%= f.submit "Update Feedback Form" %>
-                    </p>
-                <% end %>
-                <button type="button" name="button" class="hideForm">Cancel</button>
+<main>
+    <div class="title-box">
+        <h2>GA DC WDI</h2>
+        <h2>LESSONS FEEDBACK</h2>
+    </div>
+    <div class="lessons-box">
+        <div class="new-lesson-box">
+            <div id="newLesson">
+                <h3>(+) CREATE NEW SURVEY</h3>
             </div>
         </div>
-        <div class="icon resultsIcon">
-            <%= link_to "See Results", event_path(event) %>
+
+        <div id="newLessonForm">
+            <!-- this is a form to create @Lesson.new -->
+            <%= form_for @lesson do |f| %>
+                <p>
+                    <%= f.label :name %>
+                    <%= f.text_field :name %>
+                </p>
+                <p>
+                    <%= f.label :date %>
+                    <%= f.text_field :date %>
+                </p>
+                <%# f.hidden_field :user_id, :value => @user.id %>
+                <p>
+                    <%= f.submit "Create Feedback Form" %>
+                </p>
+            <% end %>
+            <button type="button" name="button" class="hideForm">Cancel</button>
         </div>
+
+        <% @events.each do |event| %>
+            <div class="lesson-listing">
+                <div class="resultsIcon">
+                    <%= link_to image_tag("stats.png"), event_path(event) %>
+                    <%= link_to "See Results", event_path(event) %>
+                </div>
+                <h4 class="eventTitle">
+                    <%= event.name %> <span class="date"><%= event.date %><span>
+                </h4>
+
+                <p class="icon surveyLink">
+                    <%= link_to "Go to live survey", new_event_response_path(event) %>
+                </p>
+                <div class="copy icon surveyLink">Copy link to clipboard
+
+                    <div class="hidden-link">Please take 1 minute to offer feedback on the <%= event.name %> lesson: http://localhost:3000<%= new_event_response_path(event) %></div>
+                </div>
+                <div class="icon editForm"> Edit the lesson</div>
+                <div class="showLessonForm">
+                    <!-- this is a form to update the existing lesson (event) -->
+                    <%= form_for event do |f| %>
+
+                        <p class="edit-form">
+                            <%= f.label :name %>
+                            <%= f.text_field :name %>
+                        </p>
+                        <p class="edit-date-form">
+                            <%= f.label :date %>
+                            <%= f.text_field :date %>
+                        </p>
+                        <%# f.hidden_field :user_id, :value => @user.id %>
+
+                        <%= f.submit "Update" %>
+                        <div type="button" name="button" class="hideForm">Cancel</div>
+
+                    <% end %>
+
+                </div>
+                <!-- </div> -->
+
+            </div>
+        <% end %>
     </div>
-<% end %>
+</main>
 <!-- <footer>
     <p>This application was built in collaboration between GA DC UXDI and WDI students. -->
         <!-- Paul Doulatshahi, Mike Dulik, Mostafa Habib, Mark Hannallah, Virginia Ibarra, and Melissa Steffan. -->
