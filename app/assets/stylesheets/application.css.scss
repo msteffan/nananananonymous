@@ -14,28 +14,6 @@
  *= require_self
  */
 
-// @font-face {
-//      font-family: 'PFDinTextCompPro';
-//      src: asset-url('PFDinTextCompPro-Regular.ttf');
-//      font-weight: normal;
-//      font-style: normal;
-//
-// }
-
-
-// @font-face {
-//   font-family: "PFDin";
-//   src: url("http://ericaandersen.net/fonts/PF%20Din%20Text%20Comp%20Pro%20Bold.ttf%22") format("tff");
-//   font-style: normal;
-//   font-weight: normal;
-// }
-
-// @font-face {
-//   font-family: "News706";
-//   src: url("News706 BT Roman.ttf") format("ttf");
-//   font-style: normal;
-//   font-weight: normal;
-// }
 
 @font-face {
  font-family: "Avenir";
@@ -58,13 +36,7 @@
 
 
 }
-//
-// @font-face {
-//     font-family: 'Circular';
-//     src: font-url("Circular/CircularStd-Black.otf");
-//
-//
-// }
+
 
 * {
     box-sizing: border-box;
@@ -84,6 +56,7 @@
     left: 0;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+    z-index: 1;
 }
 
 
@@ -389,5 +362,34 @@ input[type="submit"]:hover{
     }
     .name-box {
         width: 100%;
+    }
+}
+
+/******************** RESPONSE THANKS VIEW ********************/
+
+.thanks-box {
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 5em;
+    display: block;
+    background-color: #302F2A;
+    z-index: -1;
+
+}
+
+.thank-you-icon {
+    display: block;
+    height: 80vh;
+    width: 95vh;
+    margin: 0 auto;
+}
+
+@media (max-width: 700px){
+    .thank-you-icon {
+        height: 285px;
+        width: 375px;
     }
 }
