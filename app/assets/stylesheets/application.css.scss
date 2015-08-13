@@ -260,14 +260,32 @@ h4 {
     float: left;
     height: 400px;
     width: 50%;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
     border: 1px solid black;
+}
+
+.button-wrapper {
+    width: 25%;
+    margin: 0 auto 40px auto;
+
+}
+.graph-button {
+    width: 100%;
+}
+.button-holder {
+    margin: 0 auto;
+    width: 150px;
+    display: inline-block;
 }
 
 .comments-list {
     display: none;
 }
 
+#showComments {
+    margin: 0 auto 40px auto;
+    display: block;
+}
 
 /******************** RESPONSE NEW VIEW ********************/
 

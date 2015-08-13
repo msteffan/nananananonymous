@@ -97,9 +97,7 @@ $(".graph-button").on("click", function(){
 
 // controls the comments
 $("#showComments").on("click", function(){
-    console.log("hello");
-    $(".comments-list").show()
-    console.log("i showed it");
+    $(".comments-list").slideToggle("display")
 });
 
 
