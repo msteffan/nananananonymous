@@ -86,6 +86,8 @@ $(".copy").on("click", function(){
     copyToClipboard(surveyLink);
 
 })
+
+// adds graphs on event.show page
 $(".graph").hide();
 
 $(".graph-button").on("click", function(){
@@ -93,8 +95,11 @@ $(".graph-button").on("click", function(){
   $("." + this.className.split(' ')[1]).show();
 })
 
+// controls the comments
 $("#showComments").on("click", function(){
-    $(".comments-list").css("display", "block")
+    console.log("hello");
+    $(".comments-list").show()
+    console.log("i showed it");
 });
 
 
