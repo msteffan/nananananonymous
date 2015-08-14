@@ -37,13 +37,13 @@
             <!-- <div class="graph-button column icon">Column Graph</div> -->
         </div>
     </div>
-  </div>
+
     <div class="statistics">
       <p>Number of responses: <%= @responses.count %></p>
-      <p>Average Comfort: <%= @responses.average(:comfort_score) %></p>
-      <p>Average Completeness: <%= @responses.average(:completeness_score) %></p>
+      <p>Average Comfort: <%= @responses.average(:comfort_score).round(2) %></p>
+      <p>Average Completeness: <%= @responses.average(:completeness_score).round(2) %></p>
     </div>
-
+</div>
     <div class="button-holder full">
         <div id="showComments" class="icon"><h4>Student Comments</h4></div>
     </div>
