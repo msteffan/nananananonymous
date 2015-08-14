@@ -356,7 +356,7 @@ h4 {
 }
 .box {
     // float: left;
-    height: 400px;
+    height: 383px;
     width: 390px;
     display: inline-block;
     margin: 0 auto;
@@ -385,14 +385,16 @@ h4 {
 
 .statistics {
     margin: 0 auto;
-    width: 22%;
+    width: 100%;
+    display: inline-block;
 
 }
 
 .statistics p {
-    display: block;
-    margin: 5px;
+    display: inline-block;
+    margin-left: 10%;
     text-align: center;
+    font-weight: bold;
 
 }
 
@@ -409,7 +411,7 @@ h4 {
     margin-top: 100px;
 }
 .button-holder.full {
-    margin: 0 auto;
+    margin: 10px auto;
     width: 120px;
     width: 100%;
 }
