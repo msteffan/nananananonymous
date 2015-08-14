@@ -11,7 +11,7 @@
                         <%= event.name %> <span class="small-title"><%= event.date %><span>
                     </h4>
                     <p class="icon surveyLink">
-                        <%= link_to "Go to live survey", new_event_response_path(event) %>
+                        <%= link_to "Survey", new_event_response_path(event) %>
                     </p>
                 </div>
             <% end %>
@@ -47,12 +47,12 @@
                         <%= event.name %> <span class="small-title"><%= event.date %><span>
                     </h4>
                     <p class="icon surveyLink">
-                        <%= link_to "Go to live survey", new_event_response_path(event) %>
+                        <%= link_to "Survey", new_event_response_path(event) %>
                     </p>
-                    <div class="copy icon surveyLink">Copy link to clipboard
+                    <div class="copy icon surveyLink">Copy to clipboard
                         <div class="hidden-link">Please take 1 minute to offer feedback on the <%= event.name %> lesson: https://ga-anonymizer.herokuapp.com<%= new_event_response_path(event) %></div>
                     </div>
-                    <div class="icon editForm"> Edit the lesson</div>
+                    <div class="icon editForm"> Edit</div>
                     <div class="showLessonForm">
                         <!-- this is a form to update the existing lesson -->
                         <%= form_for event do |f| %>
