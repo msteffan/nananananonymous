@@ -392,7 +392,7 @@ h4 {
 
 .score {
     display: inline-block;
-    width: 49%;
+    width: 48%;
     // margin-left: 10px;
     // border-radius: 5px;
     // padding: 10px;
@@ -406,6 +406,12 @@ h4 {
     padding-bottom: 10px;
     border-bottom: 1px solid lightgrey;
 
+}
+
+.verticalLine {
+    border-left: 1px solid lightgrey;
+    height: 100px;
+    display: inline-block;
 }
 
 label {
@@ -457,7 +463,9 @@ input[type="text"], textarea {
 
 
 @media (max-width: 1050px){
-
+    .verticalLine {
+        display: none;
+    }
     .score {
         display: block;
         width: 100%;
