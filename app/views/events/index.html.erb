@@ -5,7 +5,18 @@
     </div>
 
     <div class="list-box">
-        <%# if current_user %>
+        <% if current_user == false %>
+            <div class="lesson-listing">
+                <h4 class="title">
+                    <%= event.name %> <span class="small-title"><%= event.date %><span>
+                </h4>
+                <p class="icon surveyLink">
+                    <%= link_to "Go to live survey", new_event_response_path(event) %>
+                </p>
+            </div>
+    <% else %>
+        <% @events.each do |event| %>
+        <% end %>
             <div class="new-lesson-box">
                 <div id="newLesson">
                     <%= image_tag("new-lesson.png") %>
@@ -60,17 +71,6 @@
                     </div>
                 </div>
             <% end %>
-        <%# end %>
-    <%# else %>
-        <% @events.each do |event| %>
-            <div class="lesson-listing">
-                <h4 class="title">
-                    <%= event.name %> <span class="small-title"><%= event.date %><span>
-                </h4>
-                <p class="icon surveyLink">
-                    <%= link_to "Go to live survey", new_event_response_path(event) %>
-                </p>
-            </div>
         <% end %>
     </div>
 </main>
