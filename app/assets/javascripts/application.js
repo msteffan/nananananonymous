@@ -73,13 +73,12 @@ $(document).ready(function(){
 
 
 //this disables and enables the submit button when 2 radio buttons are clicked
-$('input[type="submit"]').prop('disabled', true);
+    $('.response-button').prop('disabled', true);
 
-     $(document).on("click", function() {
-       if($(this).find('input[type="radio"]:checked').length >= 2)
-           {
-             $("input[type=submit]").prop("disabled", false);
-           }
+    $(document).on("click", function() {
+        if($(document).find('input[type="radio"]:checked').length >= 2){
+            $(".response-button").prop("disabled", false);
+        }
      });
 
 
