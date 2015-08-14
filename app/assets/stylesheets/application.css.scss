@@ -576,6 +576,7 @@ input[type="text"], textarea {
 }
 
 .statistics p {
-  float: left;
-  display: inline;
+  text-align: center;
+  display: block;
+  font-weight: bold;
 }
