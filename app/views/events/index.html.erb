@@ -5,7 +5,8 @@
     </div>
 
     <div class="list-box">
-        <% if current_user == false %>
+        <% if !current_user %>
+            <% @events.each do |event| %>
             <div class="lesson-listing">
                 <h4 class="title">
                     <%= event.name %> <span class="small-title"><%= event.date %><span>
@@ -14,6 +15,7 @@
                     <%= link_to "Go to live survey", new_event_response_path(event) %>
                 </p>
             </div>
+        <% end %>
     <% else %>
         <% @events.each do |event| %>
         <% end %>

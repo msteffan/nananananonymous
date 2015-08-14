@@ -8,13 +8,13 @@
             <h3 class="graph-title">Comfort</h3>
             <div class="graphs-wrapper">
                 <div class="graph pie">
-                  <%= pie_chart @responses.group(:comfort_score).count %>
+                      <%= pie_chart @responses.group(:comfort_score).count %>
                 </div>
                 <div class="graph column">
-                  <%= column_chart @responses.group(:comfort_score).count %>
+                    <%= column_chart @responses.group(:comfort_score).count %>
+                </div>
             </div>
         </div>
-
         <div class="box">
             <h3 class="graph-title">Completeness</h3>
             <div class="graphs-wrapper">
@@ -22,7 +22,7 @@
                   <%= pie_chart @responses.group(:completeness_score).count %>
                 </div>
                 <div class="graph column">
-                  <%= column_chart @responses.group(:completeness_score).count %>
+                    <%= column_chart @responses.group(:completeness_score).count %>
                 </div>
             </div>
         </div>
