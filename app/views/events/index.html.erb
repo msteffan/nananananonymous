@@ -5,28 +5,31 @@
     </div>
     <div class="lessons-box">
         <div class="new-lesson-box">
+
+
             <div id="newLesson">
-                <h3>(+) CREATE NEW SURVEY</h3>
+                <%= image_tag("new-lesson.png") %>
+                Add New Lesson
             </div>
         </div>
 
-        <div id="newLessonForm">
+        <div id="newLessonForm" class="showLessonForm">
             <!-- this is a form to create @Lesson.new -->
             <%= form_for @lesson do |f| %>
-                <p>
+                <p class="edit-form">
                     <%= f.label :name %>
                     <%= f.text_field :name %>
                 </p>
-                <p>
+                <p class="edit-date-form">
                     <%= f.label :date %>
                     <%= f.text_field :date %>
                 </p>
                 <%# f.hidden_field :user_id, :value => @user.id %>
-                <p>
-                    <%= f.submit "Create Feedback Form" %>
-                </p>
+
+                <%= f.submit "Create Form" %>
+                <div type="button" name="button" class="hideForm">Cancel</div>
             <% end %>
-            <button type="button" name="button" class="hideForm">Cancel</button>
+
         </div>
 
         <% @events.each do |event| %>

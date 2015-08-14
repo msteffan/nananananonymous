@@ -18,27 +18,8 @@
 $(document).ready(function(){
     // this function expands the form for adding a new lesson
      $("#newLesson").click(function(){
-         if ($(window).width() >= 700){
-             $("#newLessonForm").animate({
-                     width: "50%",
-                     height: "350px",
-             }, 800, function(){
-                $("#newLessonForm").css({
-                    "display": "block",
-                    "margin-top": "50px"
-                })
-             });
-         } else {
-             $("#newLessonForm").animate({
-                     width: "100%",
-                     height: "350px",
-             }, 800, function(){
-                $("#newLessonForm").css({
-                    "display": "block",
-                    "margin-top": "50px"
-                })
-             });
-         }
+        $("#newLessonForm").toggle("display")
+
      });
      // this function controls the form for editing an existing lesson
     $(".editForm").on("click", function(){
@@ -57,41 +38,45 @@ $(document).ready(function(){
 
      });
 
-// this function lets the instructor copy the survey link to his/her clipboard with a single click
-function copyToClipboard(link){
-	var copyDiv = document.createElement('div');
-	copyDiv.contentEditable = true;
-	document.body.appendChild(copyDiv);
-    copyDiv.innerHTML = link;
-	copyDiv.unselectable = "off";
-    copyDiv.focus();
-	document.execCommand('SelectAll');
-	document.execCommand("Copy", false, null);
-	document.body.removeChild(copyDiv);
-	window.scroll(this);
-}
+    // this function lets the instructor copy the survey link to his/her clipboard with a single click
+    function copyToClipboard(link){
+    	var copyDiv = document.createElement('div');
+    	copyDiv.contentEditable = true;
+    	document.body.appendChild(copyDiv);
+        copyDiv.innerHTML = link;
+    	copyDiv.unselectable = "off";
+        copyDiv.focus();
+    	document.execCommand('SelectAll');
+    	document.execCommand("Copy", false, null);
+    	document.body.removeChild(copyDiv);
+    	window.scroll(this);
+    }
 
-// on click, collect the html with the link address in it, then pass into copyToClipboard
-$(".copy").on("click", function(){
-    var surveyLink = $(this).children().html()
-    copyToClipboard(surveyLink);
+    // on click, collect the html with the link address in it, then pass into copyToClipboard
+    $(".copy").on("click", function(){
+        var surveyLink = $(this).children().html()
+        copyToClipboard(surveyLink);
 
-})
+    })
 
-// adds graphs on event.show page
-$(".graph").hide();
+    // adds graphs on event.show page
+    $(".graph").hide();
 
-$(".graph-button").on("click", function(){
-    console.log("hello");
-  $(".graph").hide();
-  $("." + this.className.split(' ')[1]).show();
-})
+    $(".graph-button").on("click", function(){
+        console.log("hello");
+      $(".graph").hide();
+      $("." + this.className.split(' ')[1]).show();
+    })
 
-// controls the comments
-$("#showComments").on("click", function(){
-    $(".comments-list").slideToggle("display")
-});
+    // controls the comments
+    $("#showComments").on("click", function(){
+        $(".comments-list").slideToggle("display")
+    });
 
+    // controls the background color of radio buttons on click
+    // $(".radio").on("click", function(){
+    //     $(this).css("background-color", "red");
+    // })
 
 
 }); // closes document.ready DO NOT DELETE

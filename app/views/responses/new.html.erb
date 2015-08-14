@@ -1,62 +1,73 @@
-<h2> Add Feedback for <%= @event.name %> </h2>
-<%= form_for [@event, @response] do |f|  %>
-    <div class="score">
-        <p><%= label :comfort_score, "How comfortable are you with this assignment?" %></p>
+<main>
+    <div class="survey-wrapper">
+        <div class="title-box">
+            <h2>Lesson Survey:</h2>
+            <h2><%= @event.name %> </h2>
+        </div>
 
-        <%= f.label(:comfort_score_1, class: "radio") do %>
-            <%= f.radio_button :comfort_score, 1 %> 1
-        <% end %>
+        <%= form_for [@event, @response] do |f|  %>
+            <div class="score">
+                <p><%= label :comfort_score, "Comfort" %></p>
 
-        <%= f.label(:comfort_score_2, class: "radio") do %>
-          <%= f.radio_button :comfort_score, 2 %> 2
-        <% end %>
 
-        <%= f.label(:comfort_score_3, class: "radio") do %>
-        <%= f.radio_button :comfort_score, 3 %> 3
-        <% end %>
+                <%= f.label(:comfort_score_1, class: "radio") do %>
+                    <%= f.radio_button :comfort_score, 1 %> 1
+                <% end %>
 
-        <%= f.label(:comfort_score_4, class: "radio") do %>
-        <%= f.radio_button :comfort_score, 4 %> 4
-        <% end %>
+                <%= f.label(:comfort_score_2, class: "radio") do %>
+                  <%= f.radio_button :comfort_score, 2 %> 2
+                <% end %>
 
-        <%= f.label(:comfort_score_5, class: "radio") do %>
-        <%= f.radio_button :comfort_score, 5 %> 5
+                <%= f.label(:comfort_score_3, class: "radio") do %>
+                <%= f.radio_button :comfort_score, 3 %> 3
+                <% end %>
+
+                <%= f.label(:comfort_score_4, class: "radio") do %>
+                <%= f.radio_button :comfort_score, 4 %> 4
+                <% end %>
+
+                <%= f.label(:comfort_score_5, class: "radio") do %>
+                <%= f.radio_button :comfort_score, 5 %> 5
+                <% end %>
+            </div>
+            <div class="score">
+                <p><%= label_tag :completeness_score, "Completion" %></p>
+
+                <%= f.label(:completeness_score_1, class: "radio") do %>
+                <%= f.radio_button :completeness_score, 1 %>1
+                <% end %>
+
+                <%= f.label(:completeness_score_2, class: "radio") do %>
+                <%= f.radio_button :completeness_score, 2 %> 2
+                <% end %>
+
+                <%= f.label(:completeness_score_3, class: "radio") do %>
+                <%= f.radio_button :completeness_score, 3 %> 3
+                <% end %>
+
+                <%= f.label(:completeness_score_4, class: "radio") do %>
+                <%= f.radio_button :completeness_score, 4 %> 4
+                <% end %>
+
+                <%= f.label(:completeness_score_5, class: "radio") do %>
+                <%= f.radio_button :completeness_score, 5 %> 5
+                <% end %>
+            </div>
+            <%# f.hidden_field :event_id, :value => @event.id %>
+
+            <div class="name-box add-comments">
+                <p>Add any additional comments or notes here.</p>
+                <%= f.text_area :comment %>
+            </div>
+
+            <div class="name-box anonymous">
+                <p>This survey is anonymous. If you'd like to include your name for instructor use only, enter it here.</p>
+                <%= f.text_field :name %>
+            </div>
+            <div class="response-submit-button">
+                <%= f.submit 'SUBMIT' %>
+            </div>
+
         <% end %>
     </div>
-    <div class="score">
-        <p><%= label_tag :completeness_score, "How complete is this assignment?" %></p>
-
-        <%= f.label(:completeness_score_1, class: "radio") do %>
-        <%= f.radio_button :completeness_score, 1 %> 1
-        <% end %>
-
-        <%= f.label(:completeness_score_2, class: "radio") do %>
-        <%= f.radio_button :completeness_score, 2 %> 2
-        <% end %>
-
-        <%= f.label(:completeness_score_3, class: "radio") do %>
-        <%= f.radio_button :completeness_score, 3 %> 3
-        <% end %>
-
-        <%= f.label(:completeness_score_4, class: "radio") do %>
-        <%= f.radio_button :completeness_score, 4 %> 4
-        <% end %>
-
-        <%= f.label(:completeness_score_5, class: "radio") do %>
-        <%= f.radio_button :completeness_score, 5 %> 5
-        <% end %>
-    </div>
-    <%# f.hidden_field :event_id, :value => @event.id %>
-    <div class="name-box">
-        <p>Add any additional comments or notes here.</p>
-        <%= f.text_area :comment %>
-    </div>
-
-    <div class="name-box">
-        <p>This survey is anonymous. If you'd like to include your name for instructor use only, enter it here.</p>
-        <%= f.text_field :name %>
-    </div>
-    <div class="submit-button">
-        <%= f.submit 'SUBMIT' %>
-    </div>
-<% end %>
+</main>

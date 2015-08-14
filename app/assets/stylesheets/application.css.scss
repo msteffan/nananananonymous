@@ -120,12 +120,18 @@ a {
 
 main {
     width: 85vw;
-    padding-top: 8em;
+    padding: 8em 0;
+    // padding-top: 8em;
     margin: 0 auto;
 }
+.title-box {
+    padding: 4rem 0 2rem 0;
+}
 .title-box h2 {
+    text-transform: uppercase;
     margin: 0;
     text-align: left;
+
 }
 .lessons-box {
     width: 100%;
@@ -139,16 +145,16 @@ main {
 
 }
 
-#newLesson h3 {
+#newLesson {
     font-family: "PFDinTextCompPro";
+    text-transform: uppercase;
     height: 100px;
-    font-size: 2.5rem;
-    line-height: 2.5;
+    font-size: 3rem;
     color: black;
     border-radius: 5px;
     text-align: left;
     cursor: pointer;
-    padding: 20px 20px 20px 50px;
+    padding: 50px;
 
 }
 //
@@ -159,12 +165,14 @@ main {
 #newLessonForm {
     display: none;
     margin: 0 auto;
+    background-color: #BE0200;
+    font-family: "PFDinTextCompPro";
+    width: 85%;
+    padding: 20px;
+
 }
 //
-// label {
-//     font-size: 24px;
-//     font-family: helvetica;
-// }
+
 //
 // button {
 //     margin: 0 auto;
@@ -269,6 +277,12 @@ input[type="submit"]:hover{
     margin: 0 auto;
 }
 
+.response-submit-button {
+    float: right;
+    width: 30%;
+    margin: 50px;
+}
+
 .hideForm {
     line-height: 3;
     display: inline-block;
@@ -370,45 +384,62 @@ h4 {
 }
 
 /******************** RESPONSE NEW VIEW ********************/
+.survey-wrapper {
+    width: 60vw;
+    margin: 0 auto;
+}
+
 
 .score {
     display: inline-block;
     width: 49%;
-    margin-left: 10px;
-    border-radius: 5px;
-    padding: 10px;
+    // margin-left: 10px;
+    // border-radius: 5px;
+    // padding: 10px;
     margin: 10px auto;
-    background-color: #ECECEC;
-    font-size: 1.5em;
-    font-family: helvetica;
-    height: 200px;
-    margin-left: 7px;
+    // background-color: #ECECEC;
+    // font-size: 1.5em;
+    font-family: "PFDinTextCompPro";
+    // height: 200px;
+    // margin-left: 7px;
     text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgrey;
 
+}
+
+label {
+    font-size: 3rem;
+    font-family: "PFDinTextCompPro";
+    text-transform: uppercase;
 }
 
 .radio{
-    border: 1px solid #FA4542;
-    background-color: #FA4542;
-    width: 15%;
+    padding: 0 5px;
     display: inline-block;
-    margin-left: -3px;
-    height: 50px;
-    line-height: 1.8;
-}
 
+}
 .radio:hover {
-    background-color: #F6201D;
-    outline: 7px solid #FBD334;
-    outline-offset:-3px;
+    background-color: #ECECEC;
 }
 
 .name-box {
-    font-family: helvetica;
+
+    // clear: left;
+    font-family: "Avenir";
     background-color: #ECECEC;
     width: 50%;
     margin: 30px auto;
     padding: 20px;
+}
+
+.name-box.add-comments {
+    width: 100%;
+}
+
+.name-box.anonymous{
+    float: left;
+    margin: 0;
 }
 
 input[type="text"], textarea {
@@ -420,29 +451,36 @@ input[type="text"], textarea {
     font-size: 24px;
 }
 
+.input[type="submit"]:hover {
+    background-color: #888888;
+}
 
-@media (max-width: 1100px){
+
+@media (max-width: 1050px){
+
     .score {
         display: block;
+        width: 100%;
         margin: 10px auto;
     }
 }
-
-@media (max-width: 1100px){
-    .score {
-        display: block;
-        margin: 10px auto;
-    }
-}
-
 
 @media (max-width: 700px){
-    .score {
-        width: 100%;
+    .survey-wrapper {
+        width: 98%;
     }
     .name-box {
         width: 100%;
     }
+
+    .response-submit-button {
+        float: none;
+        clear: both;
+        width: 100%;
+        padding-top: 20px;
+        margin: 20px auto;
+    }
+
 }
 
 /******************** RESPONSE THANKS VIEW ********************/
