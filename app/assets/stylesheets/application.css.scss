@@ -351,26 +351,27 @@ h4 {
 }
 
 .box-wrapper {
-    width: 1010px;
+    width: 800px;
     margin: 0 auto;
 
 }
 .box {
     // float: left;
     height: 400px;
-    width: 500px;
+    width: 390px;
     display: inline-block;
     margin: 0 auto;
     border-bottom: 1px solid lightgrey;
 }
 
 .button-wrapper {
-    width: 40vw;
+    width: 45vw;
     margin: 0 auto 40px auto;
 
 }
 .graph-button {
     width: 100%;
+    text-align: center;
 }
 
 .button-holder {
@@ -388,8 +389,9 @@ h4 {
 }
 
 #showComments {
+    width: 100%;
     clear: both;
-    margin: 0 0 0 5px;
+    margin: 10px 0 0 5px;
     display: block;
 }
 
@@ -404,12 +406,34 @@ h4 {
     overflow: scroll;
 }
 
-@media (max-width: 700px){
+@media (max-width: 1120px){
+    .button-holder {
+        display: block;
+    }
+}
+
+@media (max-width: 800px){
+    .box-wrapper {
+        width: 400px;
+        margin: 0;
+    }
     .box {
-        width: 100%;
+        display:block;
+        width: 350px;
+        margin: 0;
     }
     #showComments {
         width: 100%;
+    }
+    .button-holder {
+        display: block;
+    }
+
+}
+
+@media (max-width:500px) {
+    .button-wrapper {
+        width:100%;
     }
 
 }

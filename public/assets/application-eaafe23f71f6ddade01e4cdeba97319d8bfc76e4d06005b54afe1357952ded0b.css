@@ -14,8 +14,8 @@
 
  */
 @font-face {
-  font-family: "Avenir";
-  src: url("http://ericaandersen.net/fonts/Avenir.ttc") format("ttc");
+  font-family: "Circular";
+  src: url(/assets/Circular/CircularStd-Black-52659624a73a6f810bcdfd194e4064aec5671a4e526ba371e2cbeb1a3584b4a4.otf);
   font-style: normal;
   font-weight: normal;
 }
@@ -30,7 +30,7 @@
 /* line 40, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 * {
   box-sizing: border-box;
-  font-family: 'Avenir';
+  font-family: 'Circular';
 }
 
 /******************** APPLICATION LAYOUT VIEW ********************/
@@ -132,7 +132,7 @@ main {
 }
 
 /* line 137, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
-.lessons-box {
+.list-box {
   width: 100%;
   background-color: #C3C3C3;
 }
@@ -176,7 +176,7 @@ main {
 }
 
 /* line 198, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
-.eventTitle {
+.title {
   width: 90%;
   margin-right: 0;
   font-size: 3rem;
@@ -185,7 +185,7 @@ main {
 }
 
 /* line 206, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
-.date {
+.small-title {
   font-family: 'Avenir';
   font-size: 1rem;
   color: #888888;
@@ -308,75 +308,135 @@ input[type="submit"]:hover {
 h3 {
   font-size: 2em;
   margin-top: 5px;
+  margin-bottom: 0;
   text-align: center;
 }
 
-/* line 342, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+/* line 343, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 h4 {
   margin: 0;
   text-align: center;
 }
 
-/* line 346, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
-.box {
-  float: left;
-  height: 400px;
-  width: 50%;
-  margin: 0 auto 40px auto;
-  border: 1px solid black;
+/* line 348, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.graph-title {
+  text-transform: uppercase;
+  font-family: "PFDinTextCompPro";
+  font-size: 4rem;
 }
 
 /* line 354, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
-.button-wrapper {
-  width: 25%;
-  margin: 0 auto 40px auto;
+.box-wrapper {
+  width: 800px;
+  margin: 0 auto;
 }
 
 /* line 359, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
-.graph-button {
-  width: 100%;
-}
-
-/* line 362, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
-.button-holder {
-  margin: 0 auto;
-  width: 150px;
+.box {
+  height: 400px;
+  width: 390px;
   display: inline-block;
+  margin: 0 auto;
+  border-bottom: 1px solid lightgrey;
 }
 
 /* line 368, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.button-wrapper {
+  width: 45vw;
+  margin: 0 auto 40px auto;
+}
+
+/* line 373, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.graph-button {
+  width: 100%;
+  text-align: center;
+}
+
+/* line 378, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.button-holder {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+/* line 384, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 .comments-list {
   display: none;
 }
 
-/* line 372, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+/* line 388, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.name-box.comment {
+  width: 80%;
+}
+
+/* line 392, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 #showComments {
-  margin: 0 auto 40px auto;
+  width: 100%;
+  clear: both;
+  margin: 10px 0 0 5px;
   display: block;
 }
 
-@media (max-width: 700px) {
-  /* line 378, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+/* line 399, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.name {
+  font-family: "PFDinTextCompPro";
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* line 405, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.comment-body {
+  height: 66px;
+  overflow: scroll;
+}
+
+@media (max-width: 1120px) {
+  /* line 411, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  .button-holder {
+    display: block;
+  }
+}
+@media (max-width: 800px) {
+  /* line 417, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  .box-wrapper {
+    width: 400px;
+    margin: 0;
+  }
+
+  /* line 421, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
   .box {
+    display: block;
+    width: 350px;
+    margin: 0;
+  }
+
+  /* line 426, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  #showComments {
     width: 100%;
   }
 
-  /* line 381, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
-  #showComments {
+  /* line 429, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  .button-holder {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  /* line 436, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  .button-wrapper {
     width: 100%;
   }
 }
 /******************** RESPONSE NEW VIEW ********************/
-/* line 388, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+/* line 443, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 .survey-wrapper {
   width: 60vw;
   margin: 0 auto;
+  padding-bottom: 100px;
 }
 
-/* line 394, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+/* line 450, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 .score {
   display: inline-block;
-  width: 49%;
+  width: 48%;
   margin: 10px auto;
   font-family: "PFDinTextCompPro";
   text-align: center;
@@ -384,45 +444,53 @@ h4 {
   border-bottom: 1px solid lightgrey;
 }
 
-/* line 412, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+/* line 461, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+.verticalLine {
+  border-left: 1px solid lightgrey;
+  height: 100px;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+/* line 468, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 label {
   font-size: 3rem;
   font-family: "PFDinTextCompPro";
   text-transform: uppercase;
 }
 
-/* line 418, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+/* line 474, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 .radio {
   padding: 0 5px;
   display: inline-block;
 }
 
-/* line 423, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+/* line 479, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 .radio:hover {
   background-color: #ECECEC;
 }
 
-/* line 427, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+/* line 483, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 .name-box {
-  font-family: "Avenir";
+  font-family: "Circular";
   background-color: #ECECEC;
   width: 50%;
   margin: 30px auto;
   padding: 20px;
 }
 
-/* line 437, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+/* line 491, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 .name-box.add-comments {
   width: 100%;
 }
 
-/* line 441, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+/* line 495, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 .name-box.anonymous {
   float: left;
   margin: 0;
 }
 
-/* line 446, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+/* line 500, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 input[type="text"], textarea {
   height: 50px;
   line-height: 2;
@@ -432,13 +500,18 @@ input[type="text"], textarea {
   font-size: 24px;
 }
 
-/* line 455, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+/* line 509, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 .input[type="submit"]:hover {
   background-color: #888888;
 }
 
 @media (max-width: 1050px) {
-  /* line 462, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  /* line 515, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  .verticalLine {
+    display: none;
+  }
+
+  /* line 518, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
   .score {
     display: block;
     width: 100%;
@@ -446,17 +519,17 @@ input[type="text"], textarea {
   }
 }
 @media (max-width: 700px) {
-  /* line 470, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  /* line 526, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
   .survey-wrapper {
     width: 98%;
   }
 
-  /* line 473, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  /* line 529, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
   .name-box {
     width: 100%;
   }
 
-  /* line 477, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  /* line 533, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
   .response-submit-button {
     float: none;
     clear: both;
@@ -466,7 +539,7 @@ input[type="text"], textarea {
   }
 }
 /******************** RESPONSE THANKS VIEW ********************/
-/* line 489, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+/* line 545, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 .thanks-box {
   position: absolute;
   left: 0;
@@ -479,7 +552,7 @@ input[type="text"], textarea {
   z-index: -1;
 }
 
-/* line 502, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+/* line 558, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
 .thank-you-icon {
   display: block;
   height: 80vh;
@@ -488,7 +561,7 @@ input[type="text"], textarea {
 }
 
 @media (max-width: 700px) {
-  /* line 510, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
+  /* line 566, /Users/melissasteffan/wdi/projects/nananananonymous/app/assets/stylesheets/application.css.scss */
   .thank-you-icon {
     height: 285px;
     width: 375px;
