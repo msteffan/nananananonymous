@@ -62,15 +62,15 @@
             <% end %>
         <%# end %>
     <%# else %>
-        <% @events.each do |event| %>
-            <div class="lesson-listing">
-                <h4 class="title">
-                    <%= event.name %> <span class="small-title"><%= event.date %><span>
-                </h4>
-                <p class="icon surveyLink">
-                    <%= link_to "Go to live survey", new_event_response_path(event) %>
-                </p>
-            </div>
-        <% end %>
+    <% @events.each do |event| %>
+        <div class="lesson-listing">
+            <h4 class="title">
+                <%= event.name %> <span class="small-title"><%= event.date %><span>
+            </h4>
+            <p class="icon surveyLink">
+                <%= link_to "Go to live survey", new_event_response_path(event) %>
+            </p>
+        </div>
+    <% end %>
     </div>
 </main>

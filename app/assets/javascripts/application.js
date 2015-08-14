@@ -59,37 +59,16 @@ $(document).ready(function(){
 
     })
 
-    // adds graphs on event.show page
-    // $(".graph").hide();
-    //
-    // $(".graph-button").on("click", function(){
-    //   $(".graph").hide();
-    //   $("." + this.className.split(' ')[1]).show();
-    // })
-    //
-    // // controls the comments
-    // $("#showComments").on("click", function(){
-    //     $(".comments-list").slideToggle("display")
-    // });
-
+    //controls the report page
     $(".graph.pie").hide();
-    // $(".graph-button.column").hide();
-
     $(".graph-button").on("click", function(){
-      $(".graph").hide();
-    //   $(".graph-button.pie").hide();
-      $("." + this.className.split(' ')[1]).show();
+        $(".graph").hide();
+        $("." + this.className.split(' ')[1]).show();
     })
 
     // controls the comments
     $("#showComments").on("click", function(){
         $(".comments-list").slideToggle("display")
     });
-
-    // controls the background color of radio buttons on click
-    // $(".radio").on("click", function(){
-    //     $(this).css("background-color", "red");
-    // })
-
 
 }); // closes document.ready DO NOT DELETE
