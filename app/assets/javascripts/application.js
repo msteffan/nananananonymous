@@ -102,4 +102,18 @@ $("#showComments").on("click", function(){
 
 
 
+
+//this disables and enables the submit button when 2 radio buttons are clicked
+$('input[type="submit"]').prop('disabled', true);
+
+     $(document).on("click", function() {
+       if($(this).find('input[type="radio"]:checked').length >= 2)
+           {
+             console.log('enabled');
+             $("input[type=submit]").prop("disabled", false);
+           }
+     });
+
+
+
 }); // closes document.ready DO NOT DELETE
