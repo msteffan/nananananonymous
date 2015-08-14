@@ -384,7 +384,16 @@ h4 {
 }
 
 .statistics {
+    margin: 0 auto;
+    width: 22%;
+
+}
+
+.statistics p {
+    display: block;
+    margin: 5px;
     text-align: center;
+
 }
 
 .comments-list {
