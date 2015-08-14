@@ -3,7 +3,8 @@
         <h2>GA DC WDI</h2>
         <h2>LESSONS FEEDBACK</h2>
     </div>
-    <div class="lessons-box">
+
+    <div class="list-box">
         <div class="new-lesson-box">
 
 
@@ -38,8 +39,8 @@
                     <%= link_to image_tag("stats.png"), event_path(event) %>
                     <%= link_to "See Results", event_path(event) %>
                 </div>
-                <h4 class="eventTitle">
-                    <%= event.name %> <span class="date"><%= event.date %><span>
+                <h4 class="title">
+                    <%= event.name %> <span class="small-title"><%= event.date %><span>
                 </h4>
 
                 <p class="icon surveyLink">

@@ -16,8 +16,8 @@
 
 
 @font-face {
- font-family: "Avenir";
- src: url("http://ericaandersen.net/fonts/Avenir.ttc") format("ttc");
+ font-family: "Circular";
+ src: font-url("Circular/CircularStd-Black.otf");
  font-style: normal;
  font-weight: normal;
 }
@@ -38,7 +38,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Avenir';
+    font-family: 'Circular';
 }
 
 /******************** APPLICATION LAYOUT VIEW ********************/
@@ -133,7 +133,7 @@ main {
     text-align: left;
 
 }
-.lessons-box {
+.list-box {
     width: 100%;
     background-color: #C3C3C3;
 }
@@ -194,7 +194,7 @@ main {
     // border-radius: 5px;
 
 }
-    .eventTitle {
+    .title {
         width: 90%;
         margin-right: 0;
         font-size: 3rem;
@@ -202,7 +202,7 @@ main {
         text-align: left;
 
     }
-    .date {
+    .small-title {
         font-family: 'Avenir';
         font-size: 1rem;
         color: #888888;
@@ -335,6 +335,7 @@ input[type="submit"]:hover{
 h3 {
     font-size: 2em;
     margin-top: 5px;
+    margin-bottom: 0;
     text-align: center;
 }
 
@@ -342,25 +343,39 @@ h4 {
     margin: 0;
     text-align: center;
 }
+
+.graph-title {
+    text-transform: uppercase;
+    font-family: "PFDinTextCompPro";
+    font-size: 4rem;
+}
+
+.box-wrapper {
+    width: 1010px;
+    margin: 0 auto;
+
+}
 .box {
-    float: left;
+    // float: left;
     height: 400px;
-    width: 50%;
-    margin: 0 auto 40px auto;
-    border: 1px solid black;
+    width: 500px;
+    display: inline-block;
+    margin: 0 auto;
+    border-bottom: 1px solid lightgrey;
 }
 
 .button-wrapper {
-    width: 25%;
+    width: 40vw;
     margin: 0 auto 40px auto;
 
 }
 .graph-button {
     width: 100%;
 }
+
 .button-holder {
     margin: 0 auto;
-    width: 150px;
+    // width: 150px;
     display: inline-block;
 }
 
@@ -368,9 +383,25 @@ h4 {
     display: none;
 }
 
+.name-box.comment{
+    width: 80%;
+}
+
 #showComments {
-    margin: 0 auto 40px auto;
+    clear: both;
+    margin: 0 0 0 5px;
     display: block;
+}
+
+.name {
+    font-family: "PFDinTextCompPro";
+    font-size: 2rem;
+    margin: 0;
+}
+
+.comment-body {
+    height: 66px;
+    overflow: scroll;
 }
 
 @media (max-width: 700px){
@@ -394,15 +425,8 @@ h4 {
 .score {
     display: inline-block;
     width: 48%;
-    // margin-left: 10px;
-    // border-radius: 5px;
-    // padding: 10px;
     margin: 10px auto;
-    // background-color: #ECECEC;
-    // font-size: 1.5em;
     font-family: "PFDinTextCompPro";
-    // height: 200px;
-    // margin-left: 7px;
     text-align: center;
     padding-bottom: 10px;
     border-bottom: 1px solid lightgrey;
@@ -432,9 +456,7 @@ label {
 }
 
 .name-box {
-
-    // clear: left;
-    font-family: "Avenir";
+    font-family: "Circular";
     background-color: #ECECEC;
     width: 50%;
     margin: 30px auto;

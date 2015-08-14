@@ -1,52 +1,57 @@
-
-<h2>GA WDI <%=@event.name %> Lesson Feedback</h2>
-<div class="button-wrapper">
-    <div class="button-holder">
-        <button type="button" class="graph-button pie">Pie Graph</button>
-    </div>
-    <div class="button-holder">
-        <button type="button" class="graph-button column">Column Graph</button>
-    </div>
-</div>
-<div class="box">
-    <h3 class="graph-title">Comfort</h3>
-
-    <div class="graph pie">
-      <%= pie_chart @responses.group(:comfort_score).count %>
-    </div>
-    <div class="graph column">
-      <%= column_chart @responses.group(:comfort_score).count %>
-    </div>
-</div>
-
-<div class="box">
-    <h3 class="graph-title">Completeness</h3>
-
-    <div class="graph pie">
-      <%= pie_chart @responses.group(:completeness_score).count %>
-    </div>
-    <div class="graph column">
-      <%= column_chart @responses.group(:completeness_score).count %>
+<main>
+    <div class="title-box">
+        <h2><%=@event.name %> Lesson Feedback</h2>
     </div>
 
-</div>
-
-
-<button id="showComments"><h4>Student Comments</h4></button>
-<div class="comments-list">
-     <% @event.responses.each do |response| %>
-        <div class="comment name-box">
-            <p><%= response.comment %></p>
-            <% if response.name == "" %>
-                <p>Anonymous
-            <% else %>
-                <p><%= response.name %>
-            <% end %>
-            (Comfort: <%= response.comfort_score %>, Completeness: <%= response.completeness_score %>)</p>
+    <div class="box-wrapper">
+        <div class="box">
+            <h3 class="graph-title">Comfort</h3>
+            <div class="graphs-wrapper">
+                <div class="graph pie">
+                  <%= pie_chart @responses.group(:comfort_score).count %>
+                </div>
+                <div class="graph column">
+                  <%= column_chart @responses.group(:comfort_score).count %>
+                </div>
+            </div>
         </div>
-    <% end %>
-</div>
-<script>
-    $(".graph").hide();
 
-</script>
+        <div class="box">
+            <h3 class="graph-title">Completeness</h3>
+            <div class="graphs-wrapper">
+                <div class="graph pie">
+                  <%= pie_chart @responses.group(:completeness_score).count %>
+                </div>
+                <div class="graph column">
+                  <%= column_chart @responses.group(:completeness_score).count %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="button-wrapper">
+        <div class="button-holder">
+            <div class="graph-button pie icon">Pie Graph</div>
+        </div>
+        <div class="button-holder">
+            <div class="graph-button column icon">Column Graph</div>
+        </div>
+        <div class="button-holder">
+            <div id="showComments" class="icon"><h4>Student Comments</h4></div>
+        </div>
+    </div>
+    <div class="comments-list list-box">
+         <% @event.responses.each do |response| %>
+            <div class="comment lesson-listing">
+                <% if response.comment != "" %>
+                    <p class="comment-body"><%= response.comment %></p>
+                <% end %>
+                <% if response.name == "" %>
+                    <p class="name">Anonymous
+                <% else %>
+                    <p class="name"><%= response.name %>
+                <% end %>
+                <span class="small-title">(Comfort: <%= response.comfort_score %>, Completeness: <%= response.completeness_score %>)</span></p>
+            </div>
+        <% end %>
+    </div>
+</main>

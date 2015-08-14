@@ -60,11 +60,24 @@ $(document).ready(function(){
     })
 
     // adds graphs on event.show page
-    $(".graph").hide();
+    // $(".graph").hide();
+    //
+    // $(".graph-button").on("click", function(){
+    //   $(".graph").hide();
+    //   $("." + this.className.split(' ')[1]).show();
+    // })
+    //
+    // // controls the comments
+    // $("#showComments").on("click", function(){
+    //     $(".comments-list").slideToggle("display")
+    // });
+
+    $(".graph.pie").hide();
+    // $(".graph-button.column").hide();
 
     $(".graph-button").on("click", function(){
-        console.log("hello");
       $(".graph").hide();
+    //   $(".graph-button.pie").hide();
       $("." + this.className.split(' ')[1]).show();
     })
 
