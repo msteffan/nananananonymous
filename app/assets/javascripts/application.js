@@ -73,13 +73,18 @@ $(document).ready(function(){
 
 
 //this disables and enables the submit button when 2 radio buttons are clicked
-$('input[type="submit"]').prop('disabled', true);
+if ($('input[type="submit"]').parent().hasClass("response-submit-button")){
+    $('input[type="submit"]').prop('disabled', true);
 
+}
      $(document).on("click", function() {
-       if($(this).find('input[type="radio"]:checked').length >= 2)
-           {
-             $("input[type=submit]").prop("disabled", false);
-           }
+        //  var self = this;
+         if (this.parent().hasClass("response-submit-button")){
+             if($(this).find('input[type="radio"]:checked').length >= 2)
+               {
+                 $("input[type=submit]").prop("disabled", false);
+               }
+        }
      });
 
 
