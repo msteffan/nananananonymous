@@ -38,6 +38,13 @@
             <div id="showComments" class="icon"><h4>Student Comments</h4></div>
         </div>
     </div>
+
+    <div class="statistics">
+      <p>Number of responses: <%= @responses.count %></p>
+      <p>Average Comfort: <%= @responses.average(:comfort_score) %></p>
+      <p>Average Completeness: <%= @responses.average(:completeness_score) %></p>
+    </div>
+    
     <div class="comments-list list-box">
          <% @event.responses.each do |response| %>
             <div class="comment lesson-listing">
