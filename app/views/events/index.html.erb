@@ -1,24 +1,21 @@
 <main>
     <div class="title-box">
         <h2>GA DC WDI</h2>
-        <h2>LESSONS FEEDBACK</h2>
+        <h2>Lessons Feedback</h2>
     </div>
-
     <div class="list-box">
         <% if !current_user %>
             <% @events.each do |event| %>
-            <div class="lesson-listing">
-                <h4 class="title">
-                    <%= event.name %> <span class="small-title"><%= event.date %><span>
-                </h4>
-                <p class="icon surveyLink">
-                    <%= link_to "Go to live survey", new_event_response_path(event) %>
-                </p>
-            </div>
-        <% end %>
-    <% else %>
-        <% @events.each do |event| %>
-        <% end %>
+                <div class="lesson-listing">
+                    <h4 class="title">
+                        <%= event.name %> <span class="small-title"><%= event.date %><span>
+                    </h4>
+                    <p class="icon surveyLink">
+                        <%= link_to "Go to live survey", new_event_response_path(event) %>
+                    </p>
+                </div>
+            <% end %>
+        <% else %>
             <div class="new-lesson-box">
                 <div id="newLesson">
                     <%= image_tag("new-lesson.png") %>
@@ -57,7 +54,7 @@
                     </div>
                     <div class="icon editForm"> Edit the lesson</div>
                     <div class="showLessonForm">
-                        <!-- this is a form to update the existing lesson (event) -->
+                        <!-- this is a form to update the existing lesson -->
                         <%= form_for event do |f| %>
                             <p class="edit-form">
                                 <%= f.label :name %>

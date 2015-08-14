@@ -8,13 +8,13 @@
             <h3 class="graph-title">Comfort</h3>
             <div class="graphs-wrapper">
                 <div class="graph pie">
-                  <%= pie_chart @responses.group(:comfort_score).count %>
+                      <%= pie_chart @responses.group(:comfort_score).count %>
                 </div>
                 <div class="graph column">
-                  <%= column_chart @responses.group(:comfort_score).count %>
+                    <%= column_chart @responses.group(:comfort_score).count %>
+                </div>
             </div>
         </div>
-
         <div class="box">
             <h3 class="graph-title">Completeness</h3>
             <div class="graphs-wrapper">
@@ -22,14 +22,15 @@
                   <%= pie_chart @responses.group(:completeness_score).count %>
                 </div>
                 <div class="graph column">
-                  <%= column_chart @responses.group(:completeness_score).count %>
+                    <%= column_chart @responses.group(:completeness_score).count %>
                 </div>
             </div>
         </div>
-    </div>
+
     <div class="button-wrapper">
         <div class="button-holder">
-            <div class="graph-button pie icon">Pie Graph</div>
+            <%= image_tag ("pie_chart_icon.png"), :class => "graph-button pie" %>
+            <!-- <div class="graph-button pie icon">Pie Graph</div> -->
         </div>
         <div class="button-holder">
             <div class="graph-button column icon">Column Graph</div>
@@ -38,6 +39,13 @@
             <div id="showComments" class="icon"><h4>Student Comments</h4></div>
         </div>
     </div>
+</div>
+    <div class="statistics">
+      <p>Number of responses: <%= @responses.count %></p>
+      <p>Average Comfort: <%= @responses.average(:comfort_score) %></p>
+      <p>Average Completeness: <%= @responses.average(:completeness_score) %></p>
+    </div>
+
     <div class="comments-list list-box">
          <% @event.responses.each do |response| %>
             <div class="comment lesson-listing">

@@ -98,7 +98,6 @@ a {
      margin: 5px 5px 0 5px;
      height: 7rem;
      width: 7rem;
-     background-image: url("https://raw.githubusercontent.com/msteffan/nananananonymous/master/app/assets/images/GA_logo.png");
      background-size: cover;
      background-repeat: no-repeat;
  }
@@ -351,7 +350,7 @@ h4 {
 }
 
 .box-wrapper {
-    width: 800px;
+    width: 900px;
     margin: 0 auto;
 
 }
@@ -365,19 +364,23 @@ h4 {
 }
 
 .button-wrapper {
-    width: 45vw;
-    margin: 0 auto 40px auto;
+    // width: 45vw;
+    // margin: 0 auto 40px auto;
+    float: right;
 
 }
 .graph-button {
     width: 100%;
     text-align: center;
+    cursor: pointer;
 }
 
 .button-holder {
     margin: 0 auto;
     // width: 150px;
-    display: inline-block;
+    display: block;
+    height: 75px;
+    width: 75px;
 }
 
 .comments-list {
