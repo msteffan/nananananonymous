@@ -14,32 +14,10 @@
  *= require_self
  */
 
-// @font-face {
-//      font-family: 'PFDinTextCompPro';
-//      src: asset-url('PFDinTextCompPro-Regular.ttf');
-//      font-weight: normal;
-//      font-style: normal;
-//
-// }
-
-
-// @font-face {
-//   font-family: "PFDin";
-//   src: url("http://ericaandersen.net/fonts/PF%20Din%20Text%20Comp%20Pro%20Bold.ttf%22") format("tff");
-//   font-style: normal;
-//   font-weight: normal;
-// }
-
-// @font-face {
-//   font-family: "News706";
-//   src: url("News706 BT Roman.ttf") format("ttf");
-//   font-style: normal;
-//   font-weight: normal;
-// }
 
 @font-face {
- font-family: "Avenir";
- src: url("http://ericaandersen.net/fonts/Avenir.ttc") format("ttc");
+ font-family: "Circular";
+ src: font-url("Circular/CircularStd-Black.otf");
  font-style: normal;
  font-weight: normal;
 }
@@ -55,20 +33,12 @@
 @font-face {
     font-family: 'News706';
     src: font-url("News706/tt0365m_.ttf");
-
-
 }
-//
-// @font-face {
-//     font-family: 'Circular';
-//     src: font-url("Circular/CircularStd-Black.otf");
-//
-//
-// }
+
 
 * {
     box-sizing: border-box;
-    font-family: 'Avenir';
+    font-family: 'Circular';
 }
 
 /******************** APPLICATION LAYOUT VIEW ********************/
@@ -77,20 +47,20 @@
 .header {
     background-color: black;
     width: 100%;
-    height: 4rem;
+    height: 8em;
     line-height: 1.8;
     position: absolute;
     top: 0;
     left: 0;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+    z-index: 1;
 }
 
 
  h2 {
      text-align: center;
      font-size: 3em;
-
      font-family: "PFDinTextCompPro";
      margin-top: 80px;
  }
@@ -108,7 +78,7 @@ a {
      float: left;
      color: white;
      padding-top: 5px;
-     font-size: 1.75em;
+     font-size: 4.75em;
      font-weight: bold;
      text-decoration: none;
      font-family: helvetica;
@@ -126,9 +96,8 @@ a {
      float:left;
      display: inline-block;
      margin: 5px 5px 0 5px;
-     height: 50px;
-     width: 50px;
-     background-image: url("https://raw.githubusercontent.com/msteffan/nananananonymous/master/app/assets/images/GA_logo.png");
+     height: 7rem;
+     width: 7rem;
      background-size: cover;
      background-repeat: no-repeat;
  }
@@ -147,100 +116,216 @@ a {
  }
 
 /******************* INDEX VIEW *******************/
-#newLesson {
+
+main {
+    width: 85vw;
+    padding: 8em 0;
+    // padding-top: 8em;
     margin: 0 auto;
-    font-size: .75em;
-    line-height: 2.5;
-    text-align: center;
-    background-color: #FA4542;
-    color: white;
-    width: 300px;
-    height: 60px;
+}
+.title-box {
+    padding: 4rem 0 2rem 0;
+}
+.title-box h2 {
+    text-transform: uppercase;
+    margin: 0;
+    text-align: left;
+
+}
+.list-box {
+    width: 100%;
+    background-color: #C3C3C3;
+}
+.new-lesson-box {
+    width: 100%;
+    height: 125px;
+    background-color: #ECECEC;
+    font-family: "PFDinTextCompPro"
+
+}
+
+#newLesson {
+    font-family: "PFDinTextCompPro";
+    text-transform: uppercase;
+    height: 100px;
+    font-size: 3rem;
+    color: black;
     border-radius: 5px;
-}
+    text-align: left;
+    cursor: pointer;
+    padding: 50px;
 
-#newLesson:hover {
-    background-color: #F6201D;
 }
-
+//
+// #newLesson:hover {
+//     background-color: #F6201D;
+// }
+//
 #newLessonForm {
     display: none;
     margin: 0 auto;
-}
+    background-color: #BE0200;
+    font-family: "PFDinTextCompPro";
+    width: 85%;
+    padding: 20px;
 
-label {
-    font-size: 24px;
-    font-family: helvetica;
 }
+//
 
-button {
-    margin: 0 auto;
-    font-size: 1em;
-    line-height: 1.8;
-    text-align: center;
-    background-color: grey;
-    color: white;
-    width: 30%;
-    height: 50px;
-    border-radius: 5px;
-}
-
+//
+// button {
+//     margin: 0 auto;
+//     font-size: 1em;
+//     line-height: 1.8;
+//     text-align: center;
+//     background-color: grey;
+//     color: white;
+//     width: 30%;
+//     height: 50px;
+//     border-radius: 5px;
+// }
+//
 .lesson-listing {
-    width: 50%;
-    /*border: 1px solid grey;*/
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px auto;
-    background-color: #ECECEC;
-    font-size: 1.5em;
-    font-family: helvetica;
+    // width: 50%;
+    text-transform: uppercase;
+    border-bottom: 1px solid lightgrey;
+    padding: 50px;
+    // border-radius: 5px;
+
 }
+    .title {
+        width: 90%;
+        margin-right: 0;
+        font-size: 3rem;
+        font-family: "PFDinTextCompPro";
+        text-align: left;
+
+    }
+    .small-title {
+        font-family: 'Avenir';
+        font-size: 1rem;
+        color: #888888;
+    }
 
 .showLessonForm {
     display: none;
+    background-color: #BE0200;
+    padding: 20px;
 }
-
+//
 .icon {
+    text-transform: none;
+    // font-weight: bold;
+    font-size: 1.25rem;
     border: 1px solid white;
     margin-top: 10px;
-    width:100%;
-    padding: 10px 0 10px 10px;
-    border-radius: 2px;
-    background-color: #FFFFFF;
+    width:auto;
+    display: inline-block;
+    padding: 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: #FA4542;
+    color: white;
+    box-shadow: 2px 2px #888888;
     cursor: pointer;
 }
 
-.icon:hover {
-    outline: 6px solid #FBD334;
-    outline-offset:-5px;
+.icon a {
+    color: white;
+}
+
+.resultsIcon {
+    display: block;
+    float: right;
+    padding-right: 50px;
+}
+.resultsIcon a {
+    display: block;
+    font-weight: bold;
 
 }
 
-.surveyLink {
-    width: 49.4%;
-    margin: 0 auto;
+.edit-form {
+    width: 48%;
     display: inline-block;
-    text-align: center;
-    margin-bottom: 20px;
+}
+.edit-date-form {
+    width: 20%;
+    display: inline-block;
 }
 
+input[type="submit"]{
+    margin: 0 auto;
+    font-size: 1.5em;
+    line-height: 1.8;
+    text-align: center;
+    background-color: #818181;
+    color: white;
+    width: 220px;
+    display: inline-block;
+    height: 60px;
+    border-radius: 5px;
+
+}
+input[type="submit"]:hover{
+    background-color:#888888;
+}
+
+.submit-button {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.response-submit-button {
+    float: right;
+    width: 30%;
+    margin: 50px;
+}
+
+.hideForm {
+    line-height: 3;
+    display: inline-block;
+    cursor: pointer;
+    color:lightgrey;
+    padding-left: 10px;
+    // float: right;
+}
+//
+// .icon:hover {
+//     outline: 6px solid #FBD334;
+//     outline-offset:-5px;
+//
+// }
+//
+// .surveyLink {
+//     width: 49.4%;
+//     margin: 0 auto;
+//     display: inline-block;
+//     text-align: center;
+//     margin-bottom: 20px;
+// }
+//
 .hidden-link {
     display: none;
 }
-
-@media (max-width: 1180px) {
-    .surveyLink{
-        width: 100%;
-    }
-    #newLessonForm{
-        width: 100%;
-    }
-
-}
-
+//
+// @media (max-width: 1180px) {
+//     .surveyLink{
+//         width: 100%;
+//     }
+//     #newLessonForm{
+//         width: 100%;
+//     }
+//
+// }
+//
 @media (max-width: 700px){
     .lesson-listing {
         width: 100%;
+    }
+    .header-text {
+        line-height: 3;
+        font-size: 36px;
     }
 }
 
@@ -249,6 +334,7 @@ button {
 h3 {
     font-size: 2em;
     margin-top: 5px;
+    margin-bottom: 0;
     text-align: center;
 }
 
@@ -256,87 +342,161 @@ h4 {
     margin: 0;
     text-align: center;
 }
+
+.graph-title {
+    text-transform: uppercase;
+    font-family: "PFDinTextCompPro";
+    font-size: 4rem;
+}
+
+.box-wrapper {
+    width: 900px;
+    margin: 0 auto;
+
+}
 .box {
-    float: left;
+    // float: left;
     height: 400px;
-    width: 50%;
-    margin: 0 auto 40px auto;
-    border: 1px solid black;
+    width: 390px;
+    display: inline-block;
+    margin: 0 auto;
+    border-bottom: 1px solid lightgrey;
 }
 
 .button-wrapper {
-    width: 25%;
-    margin: 0 auto 40px auto;
+    // width: 45vw;
+    // margin: 0 auto 40px auto;
+    float: right;
 
 }
 .graph-button {
     width: 100%;
+    text-align: center;
+    cursor: pointer;
 }
+
 .button-holder {
     margin: 0 auto;
-    width: 150px;
-    display: inline-block;
+    // width: 150px;
+    display: block;
+    height: 75px;
+    width: 75px;
 }
 
 .comments-list {
     display: none;
 }
 
+.name-box.comment{
+    width: 80%;
+}
+
 #showComments {
-    margin: 0 auto 40px auto;
+    width: 100%;
+    clear: both;
+    margin: 10px 0 0 5px;
     display: block;
 }
 
-@media (max-width: 700px){
+.name {
+    font-family: "PFDinTextCompPro";
+    font-size: 2rem;
+    margin: 0;
+}
+
+.comment-body {
+    height: 66px;
+    overflow: scroll;
+}
+
+@media (max-width: 1120px){
+    .button-holder {
+        display: block;
+    }
+}
+
+@media (max-width: 800px){
+    .box-wrapper {
+        width: 400px;
+        margin: 0 auto;
+    }
     .box {
-        width: 100%;
+        display:block;
+        width: 350px;
+        margin: 0;
     }
     #showComments {
         width: 100%;
+    }
+    .button-holder {
+        display: block;
+    }
+
+}
+
+@media (max-width:500px) {
+    .button-wrapper {
+        width:100%;
     }
 
 }
 
 /******************** RESPONSE NEW VIEW ********************/
+.survey-wrapper {
+    width: 60vw;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
 
 .score {
     display: inline-block;
-    width: 49%;
-    margin-left: 10px;
-    border-radius: 5px;
-    padding: 10px;
+    width: 48%;
     margin: 10px auto;
-    background-color: #ECECEC;
-    font-size: 1.5em;
-    font-family: helvetica;
-    height: 200px;
-    margin-left: 7px;
+    font-family: "PFDinTextCompPro";
     text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgrey;
 
+}
+
+.verticalLine {
+    border-left: 1px solid lightgrey;
+    height: 100px;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+label {
+    font-size: 3rem;
+    font-family: "PFDinTextCompPro";
+    text-transform: uppercase;
 }
 
 .radio{
-    border: 1px solid #FA4542;
-    background-color: #FA4542;
-    width: 15%;
+    padding: 0 5px;
     display: inline-block;
-    margin-left: -3px;
-    height: 50px;
-    line-height: 1.8;
-}
 
+}
 .radio:hover {
-    background-color: #F6201D;
-    outline: 7px solid #FBD334;
-    outline-offset:-3px;
+    background-color: #ECECEC;
 }
 
 .name-box {
-    font-family: helvetica;
+    font-family: "Circular";
     background-color: #ECECEC;
     width: 50%;
     margin: 30px auto;
     padding: 20px;
+}
+
+.name-box.add-comments {
+    width: 100%;
+}
+
+.name-box.anonymous{
+    float: left;
+    margin: 0;
 }
 
 input[type="text"], textarea {
@@ -348,46 +508,65 @@ input[type="text"], textarea {
     font-size: 24px;
 }
 
-input[type="submit"]{
-    margin: 0 auto;
-    font-size: 1em;
-    line-height: 1.8;
-    text-align: center;
-    background-color: #FA4542;
-    color: white;
-    width: 98%;
-    height: 60px;
-    border-radius: 5px;
-}
-input[type="submit"]:hover{
-    background-color:#F6201D
+.input[type="submit"]:hover {
+    background-color: #888888;
 }
 
-.submit-button {
-    width: 30%;
-    margin: 0 auto;
-}
 
-@media (max-width: 1100px){
+@media (max-width: 1050px){
+    .verticalLine {
+        display: none;
+    }
     .score {
         display: block;
+        width: 100%;
         margin: 10px auto;
     }
 }
-
-@media (max-width: 1100px){
-    .score {
-        display: block;
-        margin: 10px auto;
-    }
-}
-
 
 @media (max-width: 700px){
-    .score {
-        width: 100%;
+    .survey-wrapper {
+        width: 98%;
     }
     .name-box {
         width: 100%;
+    }
+
+    .response-submit-button {
+        float: none;
+        clear: both;
+        width: 100%;
+        padding-top: 20px;
+        margin: 20px auto;
+    }
+
+}
+
+/******************** RESPONSE THANKS VIEW ********************/
+
+.thanks-box {
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 5em;
+    display: block;
+    background-color: #302F2A;
+    z-index: -1;
+
+}
+
+.thank-you-icon {
+    display: block;
+    height: 80vh;
+    width: 95vh;
+    margin: 0 auto;
+}
+
+@media (max-width: 700px){
+    .thank-you-icon {
+        height: 285px;
+        width: 375px;
     }
 }
