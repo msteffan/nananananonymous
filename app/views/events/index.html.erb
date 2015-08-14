@@ -5,7 +5,7 @@
     </div>
 
     <div class="list-box">
-        <% if current_user %>
+        <%# if current_user %>
             <div class="new-lesson-box">
                 <div id="newLesson">
                     <%= image_tag("new-lesson.png") %>
@@ -36,19 +36,16 @@
                     <h4 class="title">
                         <%= event.name %> <span class="small-title"><%= event.date %><span>
                     </h4>
-
                     <p class="icon surveyLink">
                         <%= link_to "Go to live survey", new_event_response_path(event) %>
                     </p>
                     <div class="copy icon surveyLink">Copy link to clipboard
-
                         <div class="hidden-link">Please take 1 minute to offer feedback on the <%= event.name %> lesson: https://ga-anonymizer.herokuapp.com<%= new_event_response_path(event) %></div>
                     </div>
                     <div class="icon editForm"> Edit the lesson</div>
                     <div class="showLessonForm">
                         <!-- this is a form to update the existing lesson (event) -->
                         <%= form_for event do |f| %>
-
                             <p class="edit-form">
                                 <%= f.label :name %>
                                 <%= f.text_field :name %>
@@ -57,30 +54,23 @@
                                 <%= f.label :date %>
                                 <%= f.text_field :date %>
                             </p>
-
                             <%= f.submit "Update" %>
                             <div type="button" name="button" class="hideForm">Cancel</div>
                         <% end %>
                     </div>
                 </div>
             <% end %>
-        <% end %>
-        <% else %>
-            <% @events.each do |event| %>
-                <div class="lesson-listing">
-                    <h4 class="title">
-                        <%= event.name %> <span class="small-title"><%= event.date %><span>
-                    </h4>
-                    <p class="icon surveyLink">
-                        <%= link_to "Go to live survey", new_event_response_path(event) %>
-                    </p>
-                </div>
-            <% end %>
+        <%# end %>
+    <%# else %>
+        <% @events.each do |event| %>
+            <div class="lesson-listing">
+                <h4 class="title">
+                    <%= event.name %> <span class="small-title"><%= event.date %><span>
+                </h4>
+                <p class="icon surveyLink">
+                    <%= link_to "Go to live survey", new_event_response_path(event) %>
+                </p>
+            </div>
         <% end %>
     </div>
 </main>
-<!-- <footer>
-    <p>This application was built in collaboration between GA DC UXDI and WDI students. -->
-        <!-- Paul Doulatshahi, Mike Dulik, Mostafa Habib, Mark Hannallah, Virginia Ibarra, and Melissa Steffan. -->
-    <!-- </p>
-</footer> -->
