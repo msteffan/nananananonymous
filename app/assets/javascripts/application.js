@@ -78,7 +78,6 @@ $('input[type="submit"]').prop('disabled', true);
      $(document).on("click", function() {
        if($(this).find('input[type="radio"]:checked').length >= 2)
            {
-             console.log('enabled');
              $("input[type=submit]").prop("disabled", false);
            }
      });
