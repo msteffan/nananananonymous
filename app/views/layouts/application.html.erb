@@ -7,16 +7,13 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width">
-
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
-
-
-
-  <!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
 </head>
 <body>
     <div class="header">
-        <div class="logo"></div>
+        <!-- <div class="logo"></div> -->
+        <%= link_to image_tag("GA_logo.png", :class => "logo" ), events_path%>
         <%= link_to "GENERAL ASSEMBLY", events_path, { :class => "header-text"}%>
     </div>
 

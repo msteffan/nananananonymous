@@ -38,7 +38,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Circular';
+    font-family: 'Source Sans Pro';
 }
 
 /******************** APPLICATION LAYOUT VIEW ********************/
@@ -98,7 +98,6 @@ a {
      margin: 5px 5px 0 5px;
      height: 7rem;
      width: 7rem;
-     background-image: url("https://raw.githubusercontent.com/msteffan/nananananonymous/master/app/assets/images/GA_logo.png");
      background-size: cover;
      background-repeat: no-repeat;
  }
@@ -203,7 +202,7 @@ main {
 
     }
     .small-title {
-        font-family: 'Avenir';
+        font-family: 'Source Sans Pro';
         font-size: 1rem;
         color: #888888;
     }
@@ -351,8 +350,9 @@ h4 {
 }
 
 .box-wrapper {
-    width: 800px;
+    width: 900px;
     margin: 0 auto;
+    background-color: #888888
 
 }
 .box {
@@ -365,19 +365,23 @@ h4 {
 }
 
 .button-wrapper {
-    width: 45vw;
-    margin: 0 auto 40px auto;
+    // width: 45vw;
+    // margin: 0 auto 40px auto;
+    float: right;
 
 }
 .graph-button {
     width: 100%;
     text-align: center;
+    cursor: pointer;
 }
 
 .button-holder {
     margin: 0 auto;
     // width: 150px;
-    display: inline-block;
+    display: block;
+    height: 75px;
+    width: 75px;
 }
 
 .comments-list {
@@ -388,8 +392,11 @@ h4 {
     width: 80%;
 }
 
+.button-holder.full {
+    margin: 0;
+}
 #showComments {
-    width: 100%;
+    width: 250px;
     clear: both;
     margin: 10px 0 0 5px;
     display: block;

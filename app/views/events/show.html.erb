@@ -26,21 +26,27 @@
                 </div>
             </div>
         </div>
-    </div>
+
     <div class="button-wrapper">
         <div class="button-holder">
-            <div class="graph-button pie icon">Pie Graph</div>
+            <%= image_tag ("pie_chart_icon.png"), :class => "graph-button pie" %>
+            <!-- <div class="graph-button pie icon">Pie Graph</div> -->
         </div>
         <div class="button-holder">
-            <div class="graph-button column icon">Column Graph</div>
-        </div>
-        <div class="button-holder">
-            <div id="showComments" class="icon"><h4>Student Comments</h4></div>
+            <%= image_tag ("stats.png"), :class => "graph-button column" %>
+            <!-- <div class="graph-button column icon">Column Graph</div> -->
         </div>
     </div>
+  </div>
 
     <div class="statistics">
-      <p>Number of responses: <%= @responses.count %> Average Comfort: <%= @responses.average(:comfort_score) %> Average Completeness: <%= @responses.average(:completeness_score) %></p>
+      <p>Number of responses: <%= @responses.count %></p>
+      <p>Average Comfort: <%= @responses.average(:comfort_score) %></p>
+      <p>Average Completeness: <%= @responses.average(:completeness_score) %></p>
+    </div>
+
+    <div class="button-holder full">
+        <div id="showComments" class="icon"><h4>Student Comments</h4></div>
     </div>
 
     <div class="comments-list list-box">
