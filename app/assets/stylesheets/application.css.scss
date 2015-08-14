@@ -38,7 +38,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Circular';
+    font-family: 'Source Sans Pro';
 }
 
 /******************** APPLICATION LAYOUT VIEW ********************/
@@ -202,7 +202,7 @@ main {
 
     }
     .small-title {
-        font-family: 'Avenir';
+        font-family: 'Source Sans Pro';
         font-size: 1rem;
         color: #888888;
     }
@@ -352,6 +352,7 @@ h4 {
 .box-wrapper {
     width: 900px;
     margin: 0 auto;
+    background-color: #888888
 
 }
 .box {
@@ -391,8 +392,11 @@ h4 {
     width: 80%;
 }
 
+.button-holder.full {
+    margin: 0;
+}
 #showComments {
-    width: 100%;
+    width: 250px;
     clear: both;
     margin: 10px 0 0 5px;
     display: block;

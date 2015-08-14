@@ -33,10 +33,8 @@
             <!-- <div class="graph-button pie icon">Pie Graph</div> -->
         </div>
         <div class="button-holder">
-            <div class="graph-button column icon">Column Graph</div>
-        </div>
-        <div class="button-holder">
-            <div id="showComments" class="icon"><h4>Student Comments</h4></div>
+            <%= image_tag ("stats.png"), :class => "graph-button column" %>
+            <!-- <div class="graph-button column icon">Column Graph</div> -->
         </div>
     </div>
 </div>
@@ -45,7 +43,9 @@
       <p>Average Comfort: <%= @responses.average(:comfort_score) %></p>
       <p>Average Completeness: <%= @responses.average(:completeness_score) %></p>
     </div>
-
+    <div class="button-holder full">
+        <div id="showComments" class="icon"><h4>Student Comments</h4></div>
+    </div>
     <div class="comments-list list-box">
          <% @event.responses.each do |response| %>
             <div class="comment lesson-listing">
