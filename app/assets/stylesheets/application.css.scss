@@ -398,14 +398,19 @@ h4 {
 
 .comments-list {
     display: none;
+
 }
 
 .name-box.comment{
     width: 80%;
 }
 
+.comments-list.list-box {
+    margin-top: 100px;
+}
 .button-holder.full {
     margin: 0 auto;
+    width: 120px;
     width: 100%;
 }
 #showComments {
