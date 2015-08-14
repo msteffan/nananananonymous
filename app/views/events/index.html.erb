@@ -5,75 +5,77 @@
     </div>
 
     <div class="list-box">
-        <div class="new-lesson-box">
-
-
-            <div id="newLesson">
-                <%= image_tag("new-lesson.png") %>
-                Add New Lesson
+        <% if current_user %>
+            <div class="new-lesson-box">
+                <div id="newLesson">
+                    <%= image_tag("new-lesson.png") %>
+                    Add New Lesson
+                </div>
             </div>
-        </div>
+            <div id="newLessonForm" class="showLessonForm">
+                <!-- this is a form to create @Lesson.new -->
+                <%= form_for @lesson do |f| %>
+                    <p class="edit-form">
+                        <%= f.label :name %>
+                        <%= f.text_field :name %>
+                    </p>
+                    <p class="edit-date-form">
+                        <%= f.label :date %>
+                        <%= f.text_field :date %>
+                    </p>
+                    <%= f.submit "Create Form" %>
+                    <div type="button" name="button" class="hideForm">Cancel</div>
+                <% end %>
+            </div>
+            <% @events.each do |event| %>
+                <div class="lesson-listing">
+                    <div class="resultsIcon">
+                        <%= link_to image_tag("stats.png"), event_path(event) %>
+                        <%= link_to "See Results", event_path(event) %>
+                    </div>
+                    <h4 class="title">
+                        <%= event.name %> <span class="small-title"><%= event.date %><span>
+                    </h4>
 
-        <div id="newLessonForm" class="showLessonForm">
-            <!-- this is a form to create @Lesson.new -->
-            <%= form_for @lesson do |f| %>
-                <p class="edit-form">
-                    <%= f.label :name %>
-                    <%= f.text_field :name %>
-                </p>
-                <p class="edit-date-form">
-                    <%= f.label :date %>
-                    <%= f.text_field :date %>
-                </p>
-                <%# f.hidden_field :user_id, :value => @user.id %>
+                    <p class="icon surveyLink">
+                        <%= link_to "Go to live survey", new_event_response_path(event) %>
+                    </p>
+                    <div class="copy icon surveyLink">Copy link to clipboard
 
-                <%= f.submit "Create Form" %>
-                <div type="button" name="button" class="hideForm">Cancel</div>
+                        <div class="hidden-link">Please take 1 minute to offer feedback on the <%= event.name %> lesson: https://ga-anonymizer.herokuapp.com<%= new_event_response_path(event) %></div>
+                    </div>
+                    <div class="icon editForm"> Edit the lesson</div>
+                    <div class="showLessonForm">
+                        <!-- this is a form to update the existing lesson (event) -->
+                        <%= form_for event do |f| %>
+
+                            <p class="edit-form">
+                                <%= f.label :name %>
+                                <%= f.text_field :name %>
+                            </p>
+                            <p class="edit-date-form">
+                                <%= f.label :date %>
+                                <%= f.text_field :date %>
+                            </p>
+
+                            <%= f.submit "Update" %>
+                            <div type="button" name="button" class="hideForm">Cancel</div>
+                        <% end %>
+                    </div>
+                </div>
             <% end %>
-
-        </div>
-
-        <% @events.each do |event| %>
-            <div class="lesson-listing">
-                <div class="resultsIcon">
-                    <%= link_to image_tag("stats.png"), event_path(event) %>
-                    <%= link_to "See Results", event_path(event) %>
+        <% end %>
+        <% else %>
+            <% @events.each do |event| %>
+                <div class="lesson-listing">
+                    <h4 class="title">
+                        <%= event.name %> <span class="small-title"><%= event.date %><span>
+                    </h4>
+                    <p class="icon surveyLink">
+                        <%= link_to "Go to live survey", new_event_response_path(event) %>
+                    </p>
                 </div>
-                <h4 class="title">
-                    <%= event.name %> <span class="small-title"><%= event.date %><span>
-                </h4>
-
-                <p class="icon surveyLink">
-                    <%= link_to "Go to live survey", new_event_response_path(event) %>
-                </p>
-                <div class="copy icon surveyLink">Copy link to clipboard
-
-                    <div class="hidden-link">Please take 1 minute to offer feedback on the <%= event.name %> lesson: http://localhost:3000<%= new_event_response_path(event) %></div>
-                </div>
-                <div class="icon editForm"> Edit the lesson</div>
-                <div class="showLessonForm">
-                    <!-- this is a form to update the existing lesson (event) -->
-                    <%= form_for event do |f| %>
-
-                        <p class="edit-form">
-                            <%= f.label :name %>
-                            <%= f.text_field :name %>
-                        </p>
-                        <p class="edit-date-form">
-                            <%= f.label :date %>
-                            <%= f.text_field :date %>
-                        </p>
-                        <%# f.hidden_field :user_id, :value => @user.id %>
-
-                        <%= f.submit "Update" %>
-                        <div type="button" name="button" class="hideForm">Cancel</div>
-
-                    <% end %>
-
-                </div>
-                <!-- </div> -->
-
-            </div>
+            <% end %>
         <% end %>
     </div>
 </main>
