@@ -49,7 +49,7 @@ $(document).ready(function(){
     	document.execCommand('SelectAll');
     	document.execCommand("Copy", false, null);
     	document.body.removeChild(copyDiv);
-    	window.scroll(this);
+    	window.scroll(0, 0);
     }
 
     // on click, collect the html with the link address in it, then pass into copyToClipboard

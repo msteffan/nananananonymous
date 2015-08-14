@@ -352,7 +352,6 @@ h4 {
 .box-wrapper {
     width: 900px;
     margin: 0 auto;
-    background-color: #888888
 
 }
 .box {
@@ -384,6 +383,10 @@ h4 {
     width: 75px;
 }
 
+.statistics {
+    text-align: center;
+}
+
 .comments-list {
     display: none;
 }
@@ -393,13 +396,15 @@ h4 {
 }
 
 .button-holder.full {
-    margin: 0;
+    margin: 0 auto;
+    width: 100%;
 }
 #showComments {
     width: 250px;
     clear: both;
-    margin: 10px 0 0 5px;
+    margin: 10px auto;
     display: block;
+    background-color: #CE0000;
 }
 
 .name {
@@ -599,7 +604,7 @@ ul.hmenu {
   text-align:right;
   list-style: none;
   margin: 0 0 2em;
-  padding-top: 1em;
+  padding: 1em 5em 0 0 ;
   z-index: 1;
 }
 
