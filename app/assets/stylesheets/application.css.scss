@@ -579,3 +579,40 @@ input[type="text"], textarea {
         width: 375px;
     }
 }
+
+
+.statistics p {
+  float: left;
+  display: inline;
+
+.hmenu {
+  // margin-top: 4em;
+  // z-index: 1;
+  float: right;
+  color: white;
+}
+
+.hmenu a {
+  z-index: 1;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+ul.hmenu {
+
+  text-align:right;
+  list-style: none;
+  margin: 0 0 2em;
+  padding-top: 1em;
+  z-index: 1;
+}
+
+ul.hmenu li {
+  z-index: 1;
+  color: white;
+  position: relative;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+}

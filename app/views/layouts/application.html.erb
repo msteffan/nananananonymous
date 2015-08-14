@@ -16,6 +16,10 @@
         <%= link_to image_tag("GA_logo.png", :class => "logo" ), events_path%>
         <%= link_to "GENERAL ASSEMBLY", events_path, { :class => "header-text"}%>
     </div>
+  <ul class="hmenu">
+    <%= render 'devise/menu/registration_items' %>
+    <%= render 'devise/menu/login_items' %>
+  </ul>
 
 <%= yield %>
 
